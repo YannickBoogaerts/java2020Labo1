@@ -34,7 +34,6 @@ public class Factory {
     public Ctrl getCtrl() {
         if (this.ctrl == null) {
             this.ctrl = new Ctrl();
-            this.ctrl.setModel(getModel());
             this.ctrl.setVue(getVue());
             this.ctrl.setUtility(getUtility());
             this.ctrl.setStageList(getStageList());
