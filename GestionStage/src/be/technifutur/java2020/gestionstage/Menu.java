@@ -1,23 +1,19 @@
 package be.technifutur.java2020.gestionstage;
 
 import be.technifutur.java2020.gestionstage.commun.Ctrl;
-import be.technifutur.java2020.gestionstage.commun.Model;
-import be.technifutur.java2020.gestionstage.commun.Vue;
 
 import java.util.Scanner;
 
 public class Menu {
     Scanner scanner = new Scanner(System.in);
     String input = null;
+    private Ctrl ctrl;
+
+    public void setCtrl(Ctrl ctrl) {
+        this.ctrl = ctrl;
+    }
 
     public void displayMenu() {
-        Vue vue = new Vue();
-        Ctrl ctrl = new Ctrl();
-        Model model = new Model();
-        vue.setModel(model);
-        ctrl.setModel(model);
-        ctrl.setVue(vue);
-
         showMenu();
         input = scanner.nextLine();
         while (!(input.equalsIgnoreCase("q"))) {
@@ -36,6 +32,7 @@ public class Menu {
         System.out.println("" +
                 "Veuillez choisir une option.\n" +
                 "1. Créer un stage.\n" +
+                "2. Liste des stages.\n" +
                 "q. Quitter l'application.");
     }
 }

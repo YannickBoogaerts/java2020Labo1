@@ -11,6 +11,7 @@ public class Stage {
     private int nbrParticipantInscrit = 0;*/
 
     public Stage(LocalDateTime dateDebut, LocalDateTime dateFin, String intituleStage) {
+
         setDateDebut(dateDebut);
         setDateFin(dateFin);
         setIntituleStage(intituleStage);

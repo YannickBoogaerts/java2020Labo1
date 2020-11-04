@@ -22,6 +22,7 @@ public class Vue {
     public void consigneAjoutDateStage(){
         System.out.println("Veuillez ajouter la date et l'heure sous le format suivant : \"jj\".\"mm\".\"aaaa\".\"hh\".\"mm\" ou \"q\" pour quitter");
     }
-
-
+    public void setError(String message) {
+        System.out.println(message);
+    }
 }

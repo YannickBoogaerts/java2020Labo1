@@ -1,21 +1,23 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Scanner;
 
 public class Ctrl {
     private Vue vue;
-    private Model model;
-    private Utility utility = new Utility();
-    private List<Stage> setStage;
+    private Utility utility;
+    private StageList stageList;
+
+    public void setStageList(StageList stageList) {
+        this.stageList = stageList;
+    }
+
+    public void setUtility(Utility utility) {
+        this.utility = utility;
+    }
 
     public void setVue(Vue vue) {
         this.vue = vue;
-    }
-
-    public void setModel(Model model) {
-        this.model = model;
     }
 
     public void createStage() {
@@ -45,14 +47,12 @@ public class Ctrl {
                 }
             }
             if (insertStage){
-                addStage(dateDebut,dateFin,name);
+                stageList.addStage(dateDebut,dateFin,name);
                 insertStage = false;
+                stageList.getStage(name);
             }
 
         }
     }
 
-    public void setSetStage(List<Stage> setStage) {
-        this.setStage = setStage;
-    }
 }
