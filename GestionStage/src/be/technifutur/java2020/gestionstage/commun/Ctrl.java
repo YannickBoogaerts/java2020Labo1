@@ -23,7 +23,7 @@ public class Ctrl {
         int year, month, day,hour,minute;
         vue.consigneAjoutNomStage();
         name = scanner.nextLine();
-        while (name  == ""){
+        while (name.equals("")){
             vue.consigneAjoutNomStage();
             name = scanner.nextLine();
         }
