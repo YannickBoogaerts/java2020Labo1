@@ -7,8 +7,8 @@ public class Stage {
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
     private String intituleStage;
-    private int nbrParticipantMax;
-    private int nbrParticipantInscrit = 0;
+    /*private int nbrParticipantMax;
+    private int nbrParticipantInscrit = 0;*/
 
 
     public LocalDateTime getDateDebut() {
@@ -44,7 +44,7 @@ public class Stage {
         this.intituleStage = intituleStage;
     }
 
-    public int getNbrParticipantMax() {
+   /* public int getNbrParticipantMax() {
         return nbrParticipantMax;
     }
 
@@ -62,5 +62,5 @@ public class Stage {
         }else {
             // pas possible
         }
-    }
+    }*/
 }

@@ -16,8 +16,21 @@ public class Ctrl {
 
     public void createStage() {
         Scanner scanner = new Scanner(System.in);
+        String inputDate = null,name = null;
         int year, month, day,hour,minute;
-        String name;
+        vue.consigneAjoutNomStage();
+        name = scanner.nextLine();
+        while (name  == null){
+            vue.consigneAjoutNomStage();
+            name = scanner.nextLine();
+        }
+        vue.consigneAjoutDateStage();
+        while(!inputDate.equalsIgnoreCase("q")){
+            if(inputDate.matches("()()()()()")){
+
+            }
+        }
+
 
     }
 }
