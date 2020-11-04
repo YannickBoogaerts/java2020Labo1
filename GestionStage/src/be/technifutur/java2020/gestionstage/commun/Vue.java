@@ -11,8 +11,16 @@ public class Vue {
         System.out.println("Veuillez choisir un nom de stage");
     }
 
+    public void ajoutDateDebut(){
+        System.out.println("Entrée la date et l'heure de fin");
+    }
+
+    public void ajoutDateFin(){
+        System.out.println("Entrée la date et l'heure de fin");
+    }
+
     public void consigneAjoutDateStage(){
-        System.out.println("Veuillez ajouter la date et l'heure sous le format suivant : \"jj\".\"mm\".\"aaaa\".\"hh\".\"mm\"");
+        System.out.println("Veuillez ajouter la date et l'heure sous le format suivant : \"jj\".\"mm\".\"aaaa\".\"hh\".\"mm\" ou \"q\" pour quitter");
     }
 
 

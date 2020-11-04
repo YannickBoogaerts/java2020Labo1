@@ -1,14 +1,19 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Stage {
 
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
     private String intituleStage;
+    private List<Stage> listStage = new ArrayList<>();
     /*private int nbrParticipantMax;
     private int nbrParticipantInscrit = 0;*/
+
+
 
 
     public LocalDateTime getDateDebut() {
