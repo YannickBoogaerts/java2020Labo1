@@ -12,7 +12,7 @@ public class Vue {
     }
 
     public void ajoutDateDebut(){
-        System.out.println("Entrée la date et l'heure de fin");
+        System.out.println("Entrée la date et l'heure de début");
     }
 
     public void ajoutDateFin(){

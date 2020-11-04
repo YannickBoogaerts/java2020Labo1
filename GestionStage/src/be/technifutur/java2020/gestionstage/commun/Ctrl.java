@@ -1,12 +1,14 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ctrl {
     private Vue vue;
     private Model model;
     private Utility utility = new Utility();
+    private List<Stage> setStage;
 
     public void setVue(Vue vue) {
         this.vue = vue;
@@ -18,9 +20,8 @@ public class Ctrl {
 
     public void createStage() {
         Scanner scanner = new Scanner(System.in);
-        String inputDate, name;
-        LocalDateTime dateDebut, dateFin;
-        int year, month, day, hour, minute;
+        String name;
+        LocalDateTime dateDebut = null, dateFin = null;
         boolean insertStage = true;
         while (insertStage) {
             vue.consigneAjoutNomStage();
@@ -29,15 +30,29 @@ public class Ctrl {
                 vue.consigneAjoutNomStage();
                 name = scanner.nextLine();
             }
+            if (insertStage) {
+                vue.ajoutDateDebut();
+                dateDebut = utility.saisirDate();
+                if (dateDebut == null) {
+                    insertStage = false;
+                }
+            }
+            if (insertStage) {
+                vue.ajoutDateFin();
+                dateFin = utility.saisirDate();
+                if (dateFin == null) {
+                    insertStage = false;
+                }
+            }
+            if (insertStage){
+                addStage(dateDebut,dateFin,name);
+                insertStage = false;
+            }
 
-            vue.ajoutDateDebut();
-            dateDebut = utility.saisirDate();
-
-
-            vue.ajoutDateFin();
-            dateFin = utility.saisirDate();
-
-            insertStage = false;
         }
+    }
+
+    public void setSetStage(List<Stage> setStage) {
+        this.setStage = setStage;
     }
 }

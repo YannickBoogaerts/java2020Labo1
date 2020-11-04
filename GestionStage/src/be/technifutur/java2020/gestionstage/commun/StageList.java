@@ -8,15 +8,15 @@ import java.util.List;
 public class StageList {
     private List<Stage> setStage = new ArrayList<>();
 
-    public void addStage(LocalDateTime dateDebut,LocalDateTime dateFin,String intituleStage){
-        
+    public void addStage(LocalDateTime dateDebut, LocalDateTime dateFin, String intituleStage) {
+        setStage.add(new Stage(dateDebut, dateFin, intituleStage));
     }
 
-    public void removeStage(){
+    public void removeStage() {
 
     }
 
-    public void searchStage(){
+    public void searchStage() {
 
     }
 }
