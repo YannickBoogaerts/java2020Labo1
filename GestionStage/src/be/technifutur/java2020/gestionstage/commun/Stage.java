@@ -1,27 +1,23 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Stage {
 
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
     private String intituleStage;
-    private List<Stage> listStage = new ArrayList<>();
     /*private int nbrParticipantMax;
     private int nbrParticipantInscrit = 0;*/
 
-
-
+    public Stage(LocalDateTime dateDebut, LocalDateTime dateFin, String intituleStage) {
+        setDateDebut(dateDebut);
+        setDateFin(dateFin);
+        setIntituleStage(intituleStage);
+    }
 
     public LocalDateTime getDateDebut() {
         return dateDebut;
-    }
-
-    public void setDateDebut(int year, int month, int dayOfMonth, int hour, int minute) {
-        setDateDebut(LocalDateTime.of(year, month, dayOfMonth, hour, minute));
     }
 
     public void setDateDebut(LocalDateTime dateDebut) {
@@ -30,10 +26,6 @@ public class Stage {
 
     public LocalDateTime getDateFin() {
         return dateFin;
-    }
-
-    public void setDateFin(int year, int month, int dayOfMonth, int hour, int minute) {
-        setDateDebut(LocalDateTime.of(year, month, dayOfMonth, hour, minute));
     }
 
     public void setDateFin(LocalDateTime dateFin) {
