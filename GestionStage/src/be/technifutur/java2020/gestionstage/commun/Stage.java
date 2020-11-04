@@ -17,6 +17,13 @@ public class Stage {
         setIntituleStage(intituleStage);
     }
 
+    @Override
+    public String toString() {
+        return "Date de début du stage : " + dateDebut + ".\nDate de fin du stage : " + dateFin + ".\nIntitule du stage : " + intituleStage+"\n";
+    }
+
+    //TODO changer affichage des dates en quelques choses de lisibles par un humain normalement constitué
+
     public LocalDateTime getDateDebut() {
         return dateDebut;
     }

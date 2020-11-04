@@ -26,8 +26,6 @@ public class StageList {
     public void getStage(String name) {
         //TODO affiche le stage correspond au nom
         Stage stage = setStage.get(name);
-        System.out.println(stage.getIntituleStage());
-        System.out.println(stage.getDateDebut());
-        System.out.println(stage.getDateFin());
+        System.out.println(stage);
     }
 }
