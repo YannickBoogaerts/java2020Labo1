@@ -27,6 +27,8 @@ public class Menu {
                     ctrl.createStage();
                     break;
             }
+            showMenu();
+            input = scanner.nextLine();
         }
     }
 
