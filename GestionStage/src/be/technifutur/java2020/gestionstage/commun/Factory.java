@@ -8,11 +8,13 @@ public class Factory {
     private Ctrl ctrl;
     private Utility utility;
     private Model model;
+    private ConsoleUser user;
 
 
     public Menu getMenu() {
         Menu menu = new Menu();
         menu.setCtrl(getCtrl());
+        menu.setUser(getUser());
         return menu;
     }
 
@@ -37,6 +39,7 @@ public class Factory {
             this.ctrl.setVue(getVue());
             this.ctrl.setUtility(getUtility());
             this.ctrl.setStageList(getStageList());
+            this.ctrl.setUser(getUser());
         }
         return ctrl;
     }
@@ -45,7 +48,16 @@ public class Factory {
         if (utility == null) {
             this.utility = new Utility();
         }
+        this.utility.setVue(getVue());
+        this.utility.setUser(getUser());
         return utility;
+    }
+
+    public ConsoleUser getUser() {
+        if (this.user == null){
+            this.user = new ConsoleUser();
+        }
+        return user;
     }
 
     public Model getModel() {
@@ -53,6 +65,7 @@ public class Factory {
             model = new Model();
         }
         return model;
+
 
     }
 }

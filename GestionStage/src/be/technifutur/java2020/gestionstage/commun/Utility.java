@@ -1,14 +1,13 @@
 package be.technifutur.java2020.gestionstage.commun;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Utility {
-    private Vue vue = new Vue();
-    private Scanner scanner = new Scanner(System.in);
+    private Vue vue;
+    private User user;
 
     public LocalDateTime saisirDate() {
         LocalDateTime date = null;
@@ -41,8 +40,15 @@ public class Utility {
     private String getInput() {
         String inputDate;
         vue.consigneAjoutDateStage();
-        inputDate = scanner.nextLine();
+        inputDate = user.getInput();
         return inputDate;
     }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setVue(Vue vue) {
+        this.vue = vue;
+    }
 }

@@ -23,9 +23,7 @@ public class Stage {
         return "Date de début du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) +
                 ".\nDate de fin du stage : " + dateFin.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) +
                 ".\nIntitule du stage : " + intituleStage + "\n";
-    }
-
-    //TODO changer affichage des dates en quelques choses de lisibles par un humain normalement constitué
+    }    //TODO mettre dans la vue
 
     public LocalDateTime getDateDebut() {
         return dateDebut;
