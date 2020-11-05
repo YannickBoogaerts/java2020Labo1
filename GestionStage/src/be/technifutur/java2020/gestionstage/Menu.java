@@ -10,8 +10,6 @@ public class Menu {
     private StageCtrlDisplayStage stageCtrlDisplayStage;
     private User user;
 
-
-
     public void displayMenu() {
         showMenu();
         input = user.getInput();

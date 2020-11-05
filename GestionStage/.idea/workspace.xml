@@ -32,12 +32,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b53e3f0-0cc5-4e4e-80c2-ce66b9bbc6b4" name="Default Changelist" comment="Ajout fonctionnel&#10;Verif à faire&#10;Affichage à faire">
+      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Activity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageCtrlCreateStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageCtrlCreateStage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageCtrlDisplayStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageCtrlDisplayStage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +71,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -269,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604582956121</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="rearrangement ctrl&#10;rearrangement factory">
+      <created>1604584564561</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1604584564561</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -321,13 +327,14 @@
     <MESSAGE value="Fin de la v2 : affichage des stages possible ! Bravo à toute l'équipe !" />
     <MESSAGE value="Fin de la v2 : affichage des stages possibles ! Bravo à toute l'équipe !" />
     <MESSAGE value="Modification des responsabilités et réarangement des ctrl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification des responsabilités et réarangement des ctrl" />
+    <MESSAGE value="rearrangement ctrl&#10;rearrangement factory" />
+    <option name="LAST_COMMIT_MESSAGE" value="rearrangement ctrl&#10;rearrangement factory" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1604582833410">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1604586357919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604582833410" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604586357919" />
     <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604582885947">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -340,22 +347,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604497264154" />
-    <state width="960" height="962" key="GridCell.Tab.0.bottom" timestamp="1604583819774">
+    <state width="960" height="962" key="GridCell.Tab.0.bottom" timestamp="1604585858098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="960" height="962" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604583819774" />
-    <state width="960" height="962" key="GridCell.Tab.0.center" timestamp="1604583819774">
+    <state width="960" height="962" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604585858098" />
+    <state width="960" height="962" key="GridCell.Tab.0.center" timestamp="1604585858098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="960" height="962" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604583819774" />
-    <state width="960" height="962" key="GridCell.Tab.0.left" timestamp="1604583819774">
+    <state width="960" height="962" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604585858098" />
+    <state width="960" height="962" key="GridCell.Tab.0.left" timestamp="1604585858097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="960" height="962" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604583819774" />
-    <state width="960" height="962" key="GridCell.Tab.0.right" timestamp="1604583819774">
+    <state width="960" height="962" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604585858097" />
+    <state width="960" height="962" key="GridCell.Tab.0.right" timestamp="1604585858098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="960" height="962" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604583819774" />
+    <state width="960" height="962" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604585858098" />
     <state width="1877" height="274" key="GridCell.Tab.1.bottom" timestamp="1604506944790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -376,10 +383,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="775" y="453" key="ReplaceDuplicatesPrompt/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604505379576" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1604480766633">
+    <state x="440" y="94" key="SettingsEditor" timestamp="1604585452310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604480766633" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604585452310" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1604572682521">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

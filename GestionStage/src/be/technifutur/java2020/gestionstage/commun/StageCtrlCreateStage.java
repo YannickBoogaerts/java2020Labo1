@@ -1,7 +1,6 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 import java.time.LocalDateTime;
-import java.util.*;
 
 public class StageCtrlCreateStage {
     private Vue vue;
