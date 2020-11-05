@@ -18,6 +18,9 @@ public class Menu {
                 case 1:
                     ctrl.createStage();
                     break;
+                case 2:
+                    ctrl.displayStage();
+                    break;
             }
             showMenu();
             input = user.getInput();

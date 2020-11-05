@@ -27,4 +27,9 @@ public class StageList {
     public Stage getStage(String name) {
         return mapStage.get(name);
     }
+
+    public Map getMap(){
+        return mapStage;
+    }
+
 }

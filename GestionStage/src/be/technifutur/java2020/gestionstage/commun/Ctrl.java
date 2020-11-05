@@ -1,6 +1,7 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 import java.time.LocalDateTime;
+import java.util.*;
 
 public class Ctrl {
     private Vue vue;
@@ -49,10 +50,9 @@ public class Ctrl {
                     insertStage = false;
                 }
             }
-            if (insertStage){
+            if (insertStage) {
                 try {
-                    stageList.addStage(dateDebut,dateFin,name);
-
+                    stageList.addStage(dateDebut, dateFin, name);
                     Stage stage = stageList.getStage(name);
                     vue.affichageStage(stage);
                 } catch (ExceptionGestionStage e) {
@@ -63,8 +63,14 @@ public class Ctrl {
         }
     }
 
-    public void displayStage(){
-
+    public void displayStage() {
+        Map<String, Stage> map;
+        map = stageList.getMap();
+        Collection<Stage> stage = map.values();
+        Iterator<Stage> iterator = stage.iterator();
+        while (iterator.hasNext()) {
+            vue.affichageStage(iterator.next());
+        }
     }
 
 }

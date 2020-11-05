@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Application gestion de stage");
-        Factory factory = new Factory(/*getUser()*/); //mettre ou non le getUser si je veux automatique ou non
+        Factory factory = new Factory(getUser()); //mettre ou non le getUser si je veux automatique ou non
         Menu menu = factory.getMenu();
         factory = null;
         menu.displayMenu();
@@ -19,12 +19,13 @@ public class Main {
         String[] inputTab = new String[]{
                 "1",
                 "Nom de stage",
-                "10.10.2020.08.40",
-                "10.10.2020.08.30",
-                "1",
-                "Nom de stage",
                 "10.10.2020.08.00",
                 "10.10.2020.08.30",
+                "1",
+                "Nom de stage2",
+                "10.10.2020.08.00",
+                "10.10.2020.08.30",
+                "2",
                 "q"
         };
         return new ArrayUser(Arrays.asList(inputTab).iterator());
