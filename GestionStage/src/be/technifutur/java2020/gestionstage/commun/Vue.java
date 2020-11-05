@@ -5,16 +5,24 @@ public class Vue {
     public void consigneAjoutNomStage() {
         System.out.println("Veuillez choisir un nom de stage");
     }
+    public void consigneAjoutNomActivity() {
+        System.out.println("Veuillez choisir un nom d'activitée");
+    }
+
+    public void consigneAjoutDuree(){
+        System.out.println("Veuillez saisir une durée en minute ou \"q\" pour quitter.");
+    }
 
     public void ajoutDateDebut() {
         System.out.println("Entrée la date et l'heure de début");
     }
+
     public void ajoutDateFin() {
         System.out.println("Entrée la date et l'heure de fin");
     }
 
     public void consigneAjoutDateStage() {
-        System.out.println("Veuillez ajouter la date et l'heure sous le format suivant : \"jj\".\"mm\".\"aaaa\".\"hh\".\"mm\" ou \"q\" pour quitter");
+        System.out.println("Veuillez ajouter la date et l'heure sous le format suivant : \"jj\".\"mm\".\"aaaa\".\"hh\".\"mm\" ou \"q\" pour quitter.");
     }
 
     public void setError(String message) {

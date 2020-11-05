@@ -3,33 +3,31 @@ package be.technifutur.java2020.gestionstage.commun;
 import be.technifutur.java2020.gestionstage.Menu;
 
 public class Factory {
-
-    public Factory(){
+    public Factory() {
 
     }
 
-    public Factory(User user){
+    public Factory(User user) {
         this.user = user;
     }
-
 
     private StageList stageList;
     private Vue vue;
     private StageCtrlCreateStage stageCtrlCreateStage;
     private StageCtrlDisplayStage stageCtrlDisplayStage;
+    private ActivityCtrlCreateActivity activityCtrlCreateActivity;
     private Utility utility;
     private User user;
 
 
-
     public Menu getMenu() {
         Menu menu = new Menu();
-        menu.setCtrl(StageCtrlCreateStage());
+        menu.setStageCtrlCreateStage(getStageCtrlCreateStage());
         menu.setStageCtrlDisplayStage(getStageCtrlDisplayStage());
+        menu.setActivityCtrlCreateActivity(getActivityCtrlCreateActivity());
         menu.setUser(getUser());
         return menu;
     }
-
 
 
     public StageList getStageList() {
@@ -57,13 +55,13 @@ public class Factory {
     }
 
     public User getUser() {
-        if (this.user == null){
+        if (this.user == null) {
             this.user = new ConsoleUser();
         }
         return user;
     }
 
-    public StageCtrlCreateStage StageCtrlCreateStage() {
+    public StageCtrlCreateStage getStageCtrlCreateStage() {
         if (this.stageCtrlCreateStage == null) {
             this.stageCtrlCreateStage = new StageCtrlCreateStage();
             this.stageCtrlCreateStage.setVue(getVue());
@@ -75,12 +73,23 @@ public class Factory {
     }
 
     public StageCtrlDisplayStage getStageCtrlDisplayStage() {
-        if (this.stageCtrlDisplayStage == null){
+        if (this.stageCtrlDisplayStage == null) {
             this.stageCtrlDisplayStage = new StageCtrlDisplayStage();
             this.stageCtrlDisplayStage.setStageList(getStageList());
             this.stageCtrlDisplayStage.setVue(getVue());
         }
         return stageCtrlDisplayStage;
+    }
+
+    public ActivityCtrlCreateActivity getActivityCtrlCreateActivity() {
+        if (this.activityCtrlCreateActivity == null) {
+            activityCtrlCreateActivity = new ActivityCtrlCreateActivity();
+            activityCtrlCreateActivity.setUtility(getUtility());
+            activityCtrlCreateActivity.setVue(getVue());
+            activityCtrlCreateActivity.setUser(getUser());
+            activityCtrlCreateActivity.setStageList(getStageList());
+        }
+        return activityCtrlCreateActivity;
     }
 
 }

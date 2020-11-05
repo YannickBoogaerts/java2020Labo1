@@ -1,6 +1,6 @@
-package be.technifutur.java2020.gestionstage.commun;
+package be.technifutur.java2020.gestionstage.exception;
 
-public class ExceptionGestionStage extends Exception{
+public class ExceptionGestionStage extends Exception {
     public ExceptionGestionStage() {
         super();
     }

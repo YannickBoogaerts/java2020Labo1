@@ -1,5 +1,6 @@
 package be.technifutur.java2020.gestionstage;
 
+import be.technifutur.java2020.gestionstage.commun.ActivityCtrlCreateActivity;
 import be.technifutur.java2020.gestionstage.commun.StageCtrlCreateStage;
 import be.technifutur.java2020.gestionstage.commun.StageCtrlDisplayStage;
 import be.technifutur.java2020.gestionstage.commun.User;
@@ -8,6 +9,7 @@ public class Menu {
     String input = null;
     private StageCtrlCreateStage stageCtrlCreateStage;
     private StageCtrlDisplayStage stageCtrlDisplayStage;
+    private ActivityCtrlCreateActivity activityCtrlCreateActivity;
     private User user;
 
     public void displayMenu() {
@@ -22,6 +24,10 @@ public class Menu {
                 case 2:
                     stageCtrlDisplayStage.displayStage();
                     break;
+                case 3:
+                    activityCtrlCreateActivity.createActivity();
+                    break;
+
             }
             showMenu();
             input = user.getInput();
@@ -33,6 +39,7 @@ public class Menu {
                 "Veuillez choisir une option.\n" +
                 "1. Créer un stage.\n" +
                 "2. Liste des stages.\n" +
+                "3. Créer une activitée\n" +
                 "q. Quitter l'application.");
     }
 
@@ -40,11 +47,16 @@ public class Menu {
         this.user = user;
     }
 
-    public void setCtrl(StageCtrlCreateStage stageCtrlCreateStage) {
+    public void setStageCtrlCreateStage(StageCtrlCreateStage stageCtrlCreateStage) {
         this.stageCtrlCreateStage = stageCtrlCreateStage;
     }
+
     public void setStageCtrlDisplayStage(StageCtrlDisplayStage stageCtrlDisplayStage) {
         this.stageCtrlDisplayStage = stageCtrlDisplayStage;
+    }
+
+    public void setActivityCtrlCreateActivity(ActivityCtrlCreateActivity activityCtrlCreateActivity) {
+        this.activityCtrlCreateActivity = activityCtrlCreateActivity;
     }
 
 }

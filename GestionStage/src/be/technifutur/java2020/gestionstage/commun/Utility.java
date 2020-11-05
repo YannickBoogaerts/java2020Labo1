@@ -1,6 +1,8 @@
 package be.technifutur.java2020.gestionstage.commun;
 
+import javax.swing.text.html.Option;
 import java.time.LocalDateTime;
+import java.util.OptionalInt;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -24,9 +26,9 @@ public class Utility {
                 year = Integer.parseInt(matcher.group(3));
                 hour = Integer.parseInt(matcher.group(4));
                 minute = Integer.parseInt(matcher.group(5));
-                try{
-                    date = LocalDateTime.of(year,month,day,hour,minute);
-                }catch (Exception e) {
+                try {
+                    date = LocalDateTime.of(year, month, day, hour, minute);
+                } catch (Exception e) {
                     vue.setError("La date n'est pas valide");
                     inputDate = getInput();
                 }
@@ -44,6 +46,32 @@ public class Utility {
         return inputDate;
     }
 
+    public OptionalInt saisirDuree() {
+        OptionalInt optionalInt = OptionalInt.empty();
+        Pattern pattern = Pattern.compile("[0-9][0-9][0-9]|[qQ]");
+        String inputDuration;
+        inputDuration = user.getInput();
+        while (!inputDuration.equalsIgnoreCase("q") && !tryParseInt(inputDuration)) {
+            vue.consigneAjoutDuree();
+            inputDuration = user.getInput();
+        }
+        if (!inputDuration.equalsIgnoreCase("q")){
+            optionalInt = OptionalInt.of(Integer.parseInt(inputDuration));
+        }
+        return optionalInt;
+    }
+
+    public boolean tryParseInt(String value) {
+        boolean parse = false;
+        try {
+            Integer.parseInt(value);
+            parse = false;
+        } catch (NumberFormatException e) {
+
+        }
+        return parse;
+    }
+
     public void setUser(User user) {
         this.user = user;
     }
@@ -51,4 +79,5 @@ public class Utility {
     public void setVue(Vue vue) {
         this.vue = vue;
     }
+
 }

@@ -30,6 +30,7 @@ public class Main {
                 "10.10.2020.08.00",
                 "24.02.2021.16.00",
                 "2",
+                "3",
                 "q"
         };
         return new ArrayUser(Arrays.asList(inputTab).iterator());

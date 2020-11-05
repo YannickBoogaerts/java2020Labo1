@@ -1,5 +1,7 @@
 package be.technifutur.java2020.gestionstage.commun;
 
+import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageDate;
+
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -28,6 +30,10 @@ public class StageList {
 
     public Map getMap(){
         return Collections.unmodifiableMap(mapStage);
+    }
+
+    public Collection<String> getStringCollection(){
+        return Collections.unmodifiableCollection(mapStage.keySet());
     }
 
 }

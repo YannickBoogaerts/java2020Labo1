@@ -1,4 +1,4 @@
-package be.technifutur.java2020.gestionstage.commun;
+package be.technifutur.java2020.gestionstage.exception;
 
 public class ExceptionGestionStageDate extends ExceptionGestionStage {
     public ExceptionGestionStageDate() {

@@ -1,5 +1,7 @@
 package be.technifutur.java2020.gestionstage.commun;
 
+import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageDate;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -8,6 +10,7 @@ public class Stage {
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
     private String intituleStage;
+    //TODO list of activity
     /*private int nbrParticipantMax;
     private int nbrParticipantInscrit = 0;*/
 

@@ -3,25 +3,24 @@ package be.technifutur.java2020.gestionstage.commun;
 import java.time.LocalDateTime;
 
 public class Activity {
-    private String name;
+    private String nameActivity;
     private LocalDateTime dateDebut;
-    private LocalDateTime dateFin;
-    private LocalDateTime duration;
+    private int duration;
 
-    public Activity(String name, LocalDateTime dateDebut, LocalDateTime dateFin, LocalDateTime duration){
-        setName(name);
+    public Activity(String nameActivity, LocalDateTime dateDebut, int duration, String nameStage, LocalDateTime dateFinStage){
+        //TODO faire les verif sur calcul heure de stage/activité
+        setNameActivity(nameActivity);
         setDateDebut(dateDebut);
-        setDateFin(dateFin);
         setDuration(duration);
     }
 
 
-    public String getName() {
-        return name;
+    public String getNameActivity() {
+        return nameActivity;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameActivity(String nameActivity) {
+        this.nameActivity = nameActivity;
     }
 
     public LocalDateTime getDateDebut() {
@@ -32,19 +31,11 @@ public class Activity {
         this.dateDebut = dateDebut;
     }
 
-    public LocalDateTime getDateFin() {
-        return dateFin;
-    }
-
-    public void setDateFin(LocalDateTime dateFin) {
-        this.dateFin = dateFin;
-    }
-
-    public LocalDateTime getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(LocalDateTime duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 }
