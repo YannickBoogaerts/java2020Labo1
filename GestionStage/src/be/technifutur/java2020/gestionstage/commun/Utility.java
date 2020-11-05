@@ -48,7 +48,7 @@ public class Utility {
 
     public OptionalInt saisirDuree() {
         OptionalInt optionalInt = OptionalInt.empty();
-        Pattern pattern = Pattern.compile("[0-9][0-9][0-9]|[qQ]");
+        Pattern pattern = Pattern.compile("[1-9]|[0-9][0-9][0-9]|[qQ]");
         String inputDuration;
         inputDuration = user.getInput();
         while (!inputDuration.equalsIgnoreCase("q") && !tryParseInt(inputDuration)) {
