@@ -3,12 +3,22 @@ package be.technifutur.java2020.gestionstage.commun;
 import be.technifutur.java2020.gestionstage.Menu;
 
 public class Factory {
+
+    public Factory(){
+
+    }
+
+    public Factory(User user){
+        this.user = user;
+    }
+
+
     private StageList stageList;
     private Vue vue;
     private Ctrl ctrl;
     private Utility utility;
     private Model model;
-    private ConsoleUser user;
+    private User user;
 
 
     public Menu getMenu() {
@@ -16,6 +26,17 @@ public class Factory {
         menu.setCtrl(getCtrl());
         menu.setUser(getUser());
         return menu;
+    }
+
+    public Ctrl getCtrl() {
+        if (this.ctrl == null) {
+            this.ctrl = new Ctrl();
+            this.ctrl.setVue(getVue());
+            this.ctrl.setUtility(getUtility());
+            this.ctrl.setStageList(getStageList());
+            this.ctrl.setUser(getUser());
+        }
+        return ctrl;
     }
 
     public StageList getStageList() {
@@ -33,16 +54,6 @@ public class Factory {
         return vue;
     }
 
-    public Ctrl getCtrl() {
-        if (this.ctrl == null) {
-            this.ctrl = new Ctrl();
-            this.ctrl.setVue(getVue());
-            this.ctrl.setUtility(getUtility());
-            this.ctrl.setStageList(getStageList());
-            this.ctrl.setUser(getUser());
-        }
-        return ctrl;
-    }
 
     public Utility getUtility() {
         if (utility == null) {
@@ -53,7 +64,7 @@ public class Factory {
         return utility;
     }
 
-    public ConsoleUser getUser() {
+    public User getUser() {
         if (this.user == null){
             this.user = new ConsoleUser();
         }

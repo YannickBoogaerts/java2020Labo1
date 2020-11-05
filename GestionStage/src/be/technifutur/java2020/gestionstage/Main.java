@@ -9,9 +9,8 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Application gestion de stage");
-        Factory factory = new Factory();
+        Factory factory = new Factory(getUser()); //mettre ou non le getUser si je veux automatique ou non
         Menu menu = factory.getMenu();
-        menu.setUser(getUser());
         factory = null;
         menu.displayMenu();
     }
@@ -19,10 +18,12 @@ public class Main {
     private static User getUser() {
         String[] inputTab = new String[]{
                 "1",
+                "Nom de stage",
                 "10.10.2020.08.00",
                 "10.10.2020.08.30",
                 "q"
         };
         return new ArrayUser(Arrays.asList(inputTab).iterator());
     }
+
 }

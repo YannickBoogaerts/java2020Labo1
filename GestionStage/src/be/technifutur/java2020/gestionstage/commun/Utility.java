@@ -11,7 +11,7 @@ public class Utility {
 
     public LocalDateTime saisirDate() {
         LocalDateTime date = null;
-        Pattern pattern = Pattern.compile("([0][1-9]|[1-2][0-9]|[3][0-1]).([0][1-9]|[1][0-2]).(20[0-9][0-9]).([0][0-9]|[1][0-9]|[2][0-3]).([0-5][0-9])|[qQ]");
+        Pattern pattern = Pattern.compile("([0][1-9]|[1-2][0-9]|[3][0-1]).([0][1-9]|[1][0-2]).([0-9][0-9][0-9][0-9]).([0][0-9]|[1][0-9]|[2][0-3]).([0-5][0-9])|[qQ]");
         String inputDate;
         int year = 0, month = 0, day = 0, hour = 0, minute = 0;
 
