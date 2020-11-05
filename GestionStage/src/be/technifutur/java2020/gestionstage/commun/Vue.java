@@ -7,22 +7,27 @@ public class Vue {
         this.model = model;
     }
 
-    public void consigneAjoutNomStage(){
+    public void consigneAjoutNomStage() {
         System.out.println("Veuillez choisir un nom de stage");
     }
 
-    public void ajoutDateDebut(){
+    public void ajoutDateDebut() {
         System.out.println("Entrée la date et l'heure de début");
     }
 
-    public void ajoutDateFin(){
+    public void ajoutDateFin() {
         System.out.println("Entrée la date et l'heure de fin");
     }
 
-    public void consigneAjoutDateStage(){
+    public void consigneAjoutDateStage() {
         System.out.println("Veuillez ajouter la date et l'heure sous le format suivant : \"jj\".\"mm\".\"aaaa\".\"hh\".\"mm\" ou \"q\" pour quitter");
     }
+
     public void setError(String message) {
         System.out.println(message);
+    }
+
+    public void affichageStage(Stage stage) {
+        System.out.println(stage);
     }
 }

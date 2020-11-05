@@ -49,7 +49,8 @@ public class Ctrl {
             if (insertStage){
                 stageList.addStage(dateDebut,dateFin,name);
                 insertStage = false;
-                stageList.getStage(name);
+                Stage stage = stageList.getStage(name);
+                vue.affichageStage(stage);
             }
 
         }
