@@ -15,28 +15,22 @@ public class Factory {
 
     private StageList stageList;
     private Vue vue;
-    private Ctrl ctrl;
+    private StageCtrlCreateStage stageCtrlCreateStage;
+    private StageCtrlDisplayStage stageCtrlDisplayStage;
     private Utility utility;
     private User user;
+
 
 
     public Menu getMenu() {
         Menu menu = new Menu();
         menu.setCtrl(getCtrl());
+        menu.setStageCtrlDisplayStage(getStageCtrlDisplayStage());
         menu.setUser(getUser());
         return menu;
     }
 
-    public Ctrl getCtrl() {
-        if (this.ctrl == null) {
-            this.ctrl = new Ctrl();
-            this.ctrl.setVue(getVue());
-            this.ctrl.setUtility(getUtility());
-            this.ctrl.setStageList(getStageList());
-            this.ctrl.setUser(getUser());
-        }
-        return ctrl;
-    }
+
 
     public StageList getStageList() {
         if (this.stageList == null) {
@@ -67,6 +61,28 @@ public class Factory {
             this.user = new ConsoleUser();
         }
         return user;
+    }
+
+    public StageCtrlCreateStage getCtrl() {
+        if (this.stageCtrlCreateStage == null) {
+            this.stageCtrlCreateStage = new StageCtrlCreateStage();
+            this.stageCtrlCreateStage.setVue(getVue());
+            this.stageCtrlCreateStage.setUtility(getUtility());
+            this.stageCtrlCreateStage.setStageList(getStageList());
+            this.stageCtrlCreateStage.setUser(getUser());
+        }
+        return stageCtrlCreateStage;
+    }
+
+    public StageCtrlDisplayStage getStageCtrlDisplayStage() {
+        if (this.stageCtrlDisplayStage == null){
+            this.stageCtrlDisplayStage = new StageCtrlDisplayStage();
+        }
+        this.stageCtrlDisplayStage.setUser(getUser());
+        this.stageCtrlDisplayStage.setUtility(getUtility());
+        this.stageCtrlDisplayStage.setStageList(getStageList());
+        this.stageCtrlDisplayStage.setVue(getVue());
+        return stageCtrlDisplayStage;
     }
 
 }

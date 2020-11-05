@@ -3,7 +3,7 @@ package be.technifutur.java2020.gestionstage.commun;
 import java.time.LocalDateTime;
 import java.util.*;
 
-public class Ctrl {
+public class StageCtrlCreateStage {
     private Vue vue;
     private Utility utility;
     private StageList stageList;
@@ -61,20 +61,6 @@ public class Ctrl {
                 insertStage = false;
             }
         }
-    }
-
-    public void displayStage() {
-        Map<String, Stage> map = stageList.getMap();
-        Collection<Stage> stage = map.values();
-        Iterator<Stage> iterator = stage.iterator();
-        while (iterator.hasNext()) {
-            vue.affichageStage(iterator.next());
-        }
-        /*
-        Map<String, Stage> map = stageList.getMap();
-        for(Map.Entry map2 : map.entrySet()){
-            System.out.println("Stage : " + map2);
-        }*/
     }
 
 }

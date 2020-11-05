@@ -1,12 +1,15 @@
 package be.technifutur.java2020.gestionstage;
 
-import be.technifutur.java2020.gestionstage.commun.Ctrl;
+import be.technifutur.java2020.gestionstage.commun.StageCtrlCreateStage;
+import be.technifutur.java2020.gestionstage.commun.StageCtrlDisplayStage;
 import be.technifutur.java2020.gestionstage.commun.User;
 
 public class Menu {
     String input = null;
-    private Ctrl ctrl;
+    private StageCtrlCreateStage stageCtrlCreateStage;
+    private StageCtrlDisplayStage stageCtrlDisplayStage;
     private User user;
+
 
 
     public void displayMenu() {
@@ -16,10 +19,10 @@ public class Menu {
             int choice = (Integer.parseInt(input));
             switch (choice) {
                 case 1:
-                    ctrl.createStage();
+                    stageCtrlCreateStage.createStage();
                     break;
                 case 2:
-                    ctrl.displayStage();
+                    stageCtrlDisplayStage.displayStage();
                     break;
             }
             showMenu();
@@ -39,7 +42,11 @@ public class Menu {
         this.user = user;
     }
 
-    public void setCtrl(Ctrl ctrl) {
-        this.ctrl = ctrl;
+    public void setCtrl(StageCtrlCreateStage stageCtrlCreateStage) {
+        this.stageCtrlCreateStage = stageCtrlCreateStage;
     }
+    public void setStageCtrlDisplayStage(StageCtrlDisplayStage stageCtrlDisplayStage) {
+        this.stageCtrlDisplayStage = stageCtrlDisplayStage;
+    }
+
 }
