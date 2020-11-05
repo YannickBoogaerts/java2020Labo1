@@ -24,7 +24,7 @@ public class Factory {
 
     public Menu getMenu() {
         Menu menu = new Menu();
-        menu.setCtrl(getCtrl());
+        menu.setCtrl(StageCtrlCreateStage());
         menu.setStageCtrlDisplayStage(getStageCtrlDisplayStage());
         menu.setUser(getUser());
         return menu;
@@ -50,9 +50,9 @@ public class Factory {
     public Utility getUtility() {
         if (utility == null) {
             this.utility = new Utility();
+            this.utility.setVue(getVue());
+            this.utility.setUser(getUser());
         }
-        this.utility.setVue(getVue());
-        this.utility.setUser(getUser());
         return utility;
     }
 
@@ -63,7 +63,7 @@ public class Factory {
         return user;
     }
 
-    public StageCtrlCreateStage getCtrl() {
+    public StageCtrlCreateStage StageCtrlCreateStage() {
         if (this.stageCtrlCreateStage == null) {
             this.stageCtrlCreateStage = new StageCtrlCreateStage();
             this.stageCtrlCreateStage.setVue(getVue());
@@ -77,11 +77,9 @@ public class Factory {
     public StageCtrlDisplayStage getStageCtrlDisplayStage() {
         if (this.stageCtrlDisplayStage == null){
             this.stageCtrlDisplayStage = new StageCtrlDisplayStage();
+            this.stageCtrlDisplayStage.setStageList(getStageList());
+            this.stageCtrlDisplayStage.setVue(getVue());
         }
-        this.stageCtrlDisplayStage.setUser(getUser());
-        this.stageCtrlDisplayStage.setUtility(getUtility());
-        this.stageCtrlDisplayStage.setStageList(getStageList());
-        this.stageCtrlDisplayStage.setVue(getVue());
         return stageCtrlDisplayStage;
     }
 
