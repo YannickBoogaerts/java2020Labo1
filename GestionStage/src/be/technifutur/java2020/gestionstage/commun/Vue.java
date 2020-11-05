@@ -22,6 +22,6 @@ public class Vue {
     }
 
     public void affichageStage(Stage stage) {
-        System.out.println(stage);
+        System.out.println("\n"+stage);
     }
 }

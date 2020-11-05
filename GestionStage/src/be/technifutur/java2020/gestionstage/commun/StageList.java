@@ -29,7 +29,7 @@ public class StageList {
     }
 
     public Map getMap(){
-        return mapStage;
+        return Collections.unmodifiableMap(mapStage);
     }
 
 }

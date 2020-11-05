@@ -22,9 +22,10 @@ public class Stage {
 
     @Override
     public String toString() {
-        return "Date de début du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) +
-                ".\nDate de fin du stage : " + dateFin.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) +
-                ".\nIntitule du stage : " + intituleStage + "\n";
+        return "Intitule du stage : " + intituleStage + ".\n" +
+                "Date de début du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) +
+                ".\nDate de fin du stage : " + dateFin.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm"))+"\n";
+
     }    //TODO mettre dans la vue
 
     public LocalDateTime getDateDebut() {

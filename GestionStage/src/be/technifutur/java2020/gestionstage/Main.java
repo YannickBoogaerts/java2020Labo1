@@ -18,13 +18,17 @@ public class Main {
     private static User getUser() {
         String[] inputTab = new String[]{
                 "1",
-                "Nom de stage",
-                "10.10.2020.08.00",
-                "10.10.2020.08.30",
+                "Stage de Karaté -15",
+                "02.12.2020.08.00",
+                "10.10.2021.16.00",
                 "1",
-                "Nom de stage2",
+                "Stage Multisport",
                 "10.10.2020.08.00",
-                "10.10.2020.08.30",
+                "24.02.2021.16.00",
+                "1",
+                "Stage",
+                "10.10.2025.08.00",
+                "24.02.2021.16.00",
                 "2",
                 "q"
         };

@@ -56,7 +56,7 @@ public class Ctrl {
                     Stage stage = stageList.getStage(name);
                     vue.affichageStage(stage);
                 } catch (ExceptionGestionStage e) {
-                    e.printStackTrace();
+                    vue.setError("Date de fin non valide\n");
                 }
                 insertStage = false;
             }
@@ -64,13 +64,17 @@ public class Ctrl {
     }
 
     public void displayStage() {
-        Map<String, Stage> map;
-        map = stageList.getMap();
+        Map<String, Stage> map = stageList.getMap();
         Collection<Stage> stage = map.values();
         Iterator<Stage> iterator = stage.iterator();
         while (iterator.hasNext()) {
             vue.affichageStage(iterator.next());
         }
+        /*
+        Map<String, Stage> map = stageList.getMap();
+        for(Map.Entry map2 : map.entrySet()){
+            System.out.println("Stage : " + map2);
+        }*/
     }
 
 }

@@ -12,6 +12,8 @@ public class ArrayUser implements User {
 
     @Override
     public String getInput() {
-        return iterator.next();
+        String input = iterator.next();
+        System.out.println(input);
+        return input;
     }
 }
