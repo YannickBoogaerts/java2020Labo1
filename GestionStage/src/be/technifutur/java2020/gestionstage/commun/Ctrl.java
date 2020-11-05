@@ -50,12 +50,21 @@ public class Ctrl {
                 }
             }
             if (insertStage){
-                stageList.addStage(dateDebut,dateFin,name);
+                try {
+                    stageList.addStage(dateDebut,dateFin,name);
+
+                    Stage stage = stageList.getStage(name);
+                    vue.affichageStage(stage);
+                } catch (ExceptionGestionStage e) {
+                    e.printStackTrace();
+                }
                 insertStage = false;
-                Stage stage = stageList.getStage(name);
-                vue.affichageStage(stage);
             }
         }
+    }
+
+    public void displayStage(){
+
     }
 
 }

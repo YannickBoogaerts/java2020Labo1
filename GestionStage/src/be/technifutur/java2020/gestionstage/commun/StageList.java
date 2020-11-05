@@ -6,17 +6,14 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class StageList {
-    private Map<String, Stage> setStage = new TreeMap<>();
+    private Map<String, Stage> mapStage = new TreeMap<>();
 
-    public void setSetStage(Map<String, Stage> setStage) {
-        this.setStage = setStage;
+    public void setMapStage(Map<String, Stage> mapStage) {
+        this.mapStage = mapStage;
     }
 
-    public void addStage(LocalDateTime dateDebut, LocalDateTime dateFin, String intituleStage) {
-        // TODO verif date debut - date fin
-        dateDebut.compareTo(dateFin);
-        // TODO verif nom stage <-- map
-        setStage.put(intituleStage, new Stage(dateDebut, dateFin, intituleStage));
+    public void addStage(LocalDateTime dateDebut, LocalDateTime dateFin, String intituleStage) throws ExceptionGestionStageDate {
+        mapStage.put(intituleStage, new Stage(dateDebut, dateFin, intituleStage));
     }
 
     public void removeStage() {
@@ -28,6 +25,6 @@ public class StageList {
     }
 
     public Stage getStage(String name) {
-        return setStage.get(name);
+        return mapStage.get(name);
     }
 }

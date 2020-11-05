@@ -11,8 +11,10 @@ public class Stage {
     /*private int nbrParticipantMax;
     private int nbrParticipantInscrit = 0;*/
 
-    public Stage(LocalDateTime dateDebut, LocalDateTime dateFin, String intituleStage) {
-
+    public Stage(LocalDateTime dateDebut, LocalDateTime dateFin, String intituleStage) throws ExceptionGestionStageDate {
+        if (dateFin.isBefore(dateDebut)) {
+            throw new ExceptionGestionStageDate("La date de fin n'est pas valide.");
+        }
         setDateDebut(dateDebut);
         setDateFin(dateFin);
         setIntituleStage(intituleStage);

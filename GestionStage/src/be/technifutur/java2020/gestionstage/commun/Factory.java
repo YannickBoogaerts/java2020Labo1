@@ -17,7 +17,6 @@ public class Factory {
     private Vue vue;
     private Ctrl ctrl;
     private Utility utility;
-    private Model model;
     private User user;
 
 
@@ -49,7 +48,6 @@ public class Factory {
     public Vue getVue() {
         if (this.vue == null) {
             this.vue = new Vue();
-            this.vue.setModel(getModel());
         }
         return vue;
     }
@@ -71,12 +69,4 @@ public class Factory {
         return user;
     }
 
-    public Model getModel() {
-        if (this.model == null) {
-            model = new Model();
-        }
-        return model;
-
-
-    }
 }
