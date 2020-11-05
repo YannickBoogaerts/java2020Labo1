@@ -33,8 +33,7 @@
     <list default="true" id="0b53e3f0-0cc5-4e4e-80c2-ce66b9bbc6b4" name="Default Changelist" comment="Ajout fonctionnel&#10;Verif à faire&#10;Affichage à faire">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Ctrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Ctrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Vue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Vue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Stage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604518337206</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="changement de responsabilité affichage stage">
+      <created>1604557313903</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1604557313903</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,7 +274,8 @@
     <MESSAGE value="Ajout fonctionnel&#10;Verif à faire&#10;Affichage à faire" />
     <MESSAGE value="Ajout affichage de la validation de stage ajouté" />
     <MESSAGE value="changement toString + au dodo" />
-    <option name="LAST_COMMIT_MESSAGE" value="changement toString + au dodo" />
+    <MESSAGE value="changement de responsabilité affichage stage" />
+    <option name="LAST_COMMIT_MESSAGE" value="changement de responsabilité affichage stage" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1604556925389">
@@ -287,22 +294,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604497264154" />
-    <state width="1921" height="983" key="GridCell.Tab.0.bottom" timestamp="1604518358672">
+    <state width="1921" height="983" key="GridCell.Tab.0.bottom" timestamp="1604559880264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="983" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604518358672" />
-    <state width="1921" height="983" key="GridCell.Tab.0.center" timestamp="1604518358672">
+    <state width="1921" height="983" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604559880264" />
+    <state width="1921" height="983" key="GridCell.Tab.0.center" timestamp="1604559880264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="983" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604518358672" />
-    <state width="1921" height="983" key="GridCell.Tab.0.left" timestamp="1604518358672">
+    <state width="1921" height="983" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604559880264" />
+    <state width="1921" height="983" key="GridCell.Tab.0.left" timestamp="1604559880264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="983" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604518358672" />
-    <state width="1921" height="983" key="GridCell.Tab.0.right" timestamp="1604518358672">
+    <state width="1921" height="983" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604559880264" />
+    <state width="1921" height="983" key="GridCell.Tab.0.right" timestamp="1604559880264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="983" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604518358672" />
+    <state width="1921" height="983" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604559880264" />
     <state width="1877" height="274" key="GridCell.Tab.1.bottom" timestamp="1604506944790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -327,10 +334,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604480766633" />
-    <state x="413" y="149" width="1184" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604518351100">
+    <state x="413" y="149" width="1184" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604557321068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="413" y="149" width="1184" height="535" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604518351100" />
+    <state x="413" y="149" width="1184" height="535" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604557321068" />
     <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604485720712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

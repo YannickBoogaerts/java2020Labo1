@@ -1,6 +1,7 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Stage {
 
@@ -19,7 +20,9 @@ public class Stage {
 
     @Override
     public String toString() {
-        return "Date de début du stage : " + dateDebut + ".\nDate de fin du stage : " + dateFin + ".\nIntitule du stage : " + intituleStage+"\n";
+        return "Date de début du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) +
+                ".\nDate de fin du stage : " + dateFin.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) +
+                ".\nIntitule du stage : " + intituleStage + "\n";
     }
 
     //TODO changer affichage des dates en quelques choses de lisibles par un humain normalement constitué

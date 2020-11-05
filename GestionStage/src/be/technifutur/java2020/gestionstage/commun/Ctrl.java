@@ -7,6 +7,7 @@ public class Ctrl {
     private Vue vue;
     private Utility utility;
     private StageList stageList;
+    private Scanner scanner = new Scanner(System.in);
 
     public void setStageList(StageList stageList) {
         this.stageList = stageList;
@@ -21,7 +22,6 @@ public class Ctrl {
     }
 
     public void createStage() {
-        Scanner scanner = new Scanner(System.in);
         String name;
         LocalDateTime dateDebut = null, dateFin = null;
         boolean insertStage = true;
