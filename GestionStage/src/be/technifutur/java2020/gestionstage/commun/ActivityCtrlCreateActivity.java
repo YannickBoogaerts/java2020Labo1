@@ -1,5 +1,7 @@
 package be.technifutur.java2020.gestionstage.commun;
 
+import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageNomInvalide;
+
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Map;
@@ -25,7 +27,7 @@ public class ActivityCtrlCreateActivity {
         }
         createStage = nameStageIsValid(nameStage);
 
-        if (createStage){
+        if (createStage) {
             vue.ajoutDateDebut();
             dateDebut = utility.saisirDate();
             if (dateDebut == null) {
@@ -34,20 +36,19 @@ public class ActivityCtrlCreateActivity {
         }
         //TODO NOM DE L ACTIVITE PARDI !
 
-        if (createStage){
+        if (createStage) {
             OptionalInt inputDuration;
             vue.consigneAjoutDuree();
             inputDuration = utility.saisirDuree();
-            if (inputDuration.isEmpty()){
+            if (inputDuration.isEmpty()) {
                 createStage = false;
-            }else {
+            } else {
                 duration = inputDuration.getAsInt();
             }
         }
-        if (createStage){
+        if (createStage) {
             //TODO CREER ET INSERER L ACTIVITE
         }
-
 
 
     }
@@ -55,14 +56,19 @@ public class ActivityCtrlCreateActivity {
     /*
     verifier que le stage existe
      */
-    private boolean nameStageIsValid(String nameStage) {
+    public boolean nameStageIsValid(String nameStage) {
         boolean isValid = false;
         Collection<String> collection = stageList.getStringCollection();
-        if (collection.contains(nameStage)) {
-            isValid = true;
+        try {
+            if (collection.contains(nameStage)) {
+                isValid = true;
+            } else {
+                throw new ExceptionGestionStageNomInvalide("Le stage n'existe pas");
+            }
+        } catch (ExceptionGestionStageNomInvalide e) {
+            vue.setError(e.getMessage());
         }
         return isValid;
-
     }
 
     public void setUtility(Utility utility) {

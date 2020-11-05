@@ -31,6 +31,7 @@ public class Main {
                 "24.02.2021.16.00",
                 "2",
                 "3",
+                "toto",
                 "q"
         };
         return new ArrayUser(Arrays.asList(inputTab).iterator());
