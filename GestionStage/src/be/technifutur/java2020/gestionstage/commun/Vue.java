@@ -56,18 +56,18 @@ public class Vue {
         LocalDate dateDebutStage = stage.getDateDebut().toLocalDate();
         System.out.println("Horaire du stage : " + stage.getIntituleStage());
         System.out.println("" +
-                dateDebutStage.getDayOfWeek().getDisplayName(TextStyle.FULL,Locale.FRANCE).toUpperCase() + " " + //TODO ECRIRE EN FRANCAIS
+                dateDebutStage.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.FRANCE).toUpperCase() + " " +
                 dateDebutStage.getDayOfMonth() + " " +
-                dateDebutStage.getMonth().getDisplayName(TextStyle.FULL,Locale.FRANCE).toUpperCase() + " " + //TODO ECRIRE EN FRANCAIS
+                dateDebutStage.getMonth().getDisplayName(TextStyle.FULL, Locale.FRANCE).toUpperCase() + " " +
                 dateDebutStage.getYear()
         );
         for (Activity activity : activityList) {
             if (dateDebutStage.isBefore(activity.getDateDebut().toLocalDate())) {
                 dateDebutStage = activity.getDateDebut().toLocalDate();
                 System.out.println("" +
-                        dateDebutStage.getDayOfWeek().getDisplayName(TextStyle.FULL,Locale.FRANCE).toUpperCase() + " " + //TODO ECRIRE EN FRANCAIS
+                        dateDebutStage.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.FRANCE).toUpperCase() + " " +
                         dateDebutStage.getDayOfMonth() + " " +
-                        dateDebutStage.getMonth().getDisplayName(TextStyle.FULL,Locale.FRANCE).toUpperCase() + " " + //TODO ECRIRE EN FRANCAIS
+                        dateDebutStage.getMonth().getDisplayName(TextStyle.FULL, Locale.FRANCE).toUpperCase() + " " +
                         dateDebutStage.getYear()
                 );
             }

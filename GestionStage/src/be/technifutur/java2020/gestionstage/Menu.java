@@ -40,7 +40,7 @@ public class Menu {
                 "Veuillez choisir une option.\n" +
                 "1. Créer un stage.\n" +
                 "2. Liste des stages.\n" +
-                "3. Créer une activitée\n" +
+                "3. Créer une activitée\n" + /* repack 3 et 4 dans un sous-menu */
                 "4. Afficher l'horaire d'un stage\n" +
                 "q. Quitter l'application.");
     }
