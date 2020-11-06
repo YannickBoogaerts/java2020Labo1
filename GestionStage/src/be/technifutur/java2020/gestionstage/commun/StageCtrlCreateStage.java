@@ -41,7 +41,7 @@ public class StageCtrlCreateStage {
                 Stage stage = stageList.getStage(name);
                 vue.affichageStage(stage);
             } catch (ExceptionGestionStage e) {
-                vue.setError("Date de fin non valide\n");
+                vue.setError(e.getMessage());
             }
             insertStage = false;
         }

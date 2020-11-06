@@ -1,5 +1,6 @@
 package be.technifutur.java2020.gestionstage.commun;
 
+import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStage;
 import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageNomInvalide;
 
 import java.time.LocalDateTime;
@@ -11,10 +12,11 @@ public class ActivityCtrlCreateActivity {
     private Vue vue;
     private User user;
     private StageList stageList;
+    private Collection<String> collection = stageList.getStringCollection();
 
     public void createActivity() {
         String nameActivity=null, nameStage;
-        int duration;
+        int duration=0;
         LocalDateTime dateDebut = null;
         boolean createStage = true;
 
@@ -27,7 +29,7 @@ public class ActivityCtrlCreateActivity {
         if (nameStage.equalsIgnoreCase("q")) {
             createStage = false;
         } else {
-            createStage = nameStageIsValid(nameStage);
+            createStage = nameStageIsValid(nameStage, collection);
         }
 
         if (createStage) {
@@ -63,7 +65,11 @@ public class ActivityCtrlCreateActivity {
         }
 
         if (createStage) {
-            //TODO CREER ET INSERER L ACTIVITE
+            try{
+                Activity activity = new Activity(nameActivity,dateDebut,duration,nameStage);
+            }catch (ExceptionGestionStage e){
+                vue.setError(e.getMessage());
+            }
         }
 
 
@@ -72,9 +78,8 @@ public class ActivityCtrlCreateActivity {
     /*
     verifier que le stage existe
      */
-    public boolean nameStageIsValid(String nameStage) {
+    public boolean nameStageIsValid(String nameStage,Collection<String> collection) {
         boolean isValid = false;
-        Collection<String> collection = stageList.getStringCollection();
         try {
             if (collection.contains(nameStage)) {
                 isValid = true;
