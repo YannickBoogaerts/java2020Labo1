@@ -31,7 +31,10 @@ public class Main {
                 "24.02.2021.16.00",
                 "2",
                 "3",
-                "toto",
+                "Ztage",
+                "Activité 1",
+                "10.10.2020.08.00",
+                "60",
                 "q"
         };
         return new ArrayUser(Arrays.asList(inputTab).iterator());

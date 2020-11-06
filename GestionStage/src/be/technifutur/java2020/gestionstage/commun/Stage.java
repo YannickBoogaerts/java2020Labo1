@@ -4,12 +4,16 @@ import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageDate;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Stage {
 
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
     private String intituleStage;
+    private Set<Activity> collectionActivity;
     //TODO list of activity
     /*private int nbrParticipantMax;
     private int nbrParticipantInscrit = 0;*/
@@ -21,6 +25,7 @@ public class Stage {
         setDateDebut(dateDebut);
         setDateFin(dateFin);
         setIntituleStage(intituleStage);
+        collectionActivity = new LinkedHashSet<>();
     }
 
     @Override
@@ -54,6 +59,10 @@ public class Stage {
 
     public void setIntituleStage(String intituleStage) {
         this.intituleStage = intituleStage;
+    }
+
+    public Set<Activity> getCollectionActivity() {
+        return collectionActivity;
     }
 
    /* public int getNbrParticipantMax() {

@@ -43,7 +43,6 @@ public class StageCtrlCreateStage {
             } catch (ExceptionGestionStage e) {
                 vue.setError(e.getMessage());
             }
-            insertStage = false;
         }
 
     }
