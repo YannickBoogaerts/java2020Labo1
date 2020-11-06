@@ -1,9 +1,7 @@
 package be.technifutur.java2020.gestionstage.commun;
 
-import javax.swing.text.html.Option;
 import java.time.LocalDateTime;
 import java.util.OptionalInt;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -62,12 +60,11 @@ public class Utility {
         return optionalInt;
     }
 
-
     public boolean tryParseInt(String value) {
         boolean parse = false;
         try {
             Integer.parseInt(value);
-            parse = false;
+            parse = true;
         } catch (NumberFormatException e) {
 
         }

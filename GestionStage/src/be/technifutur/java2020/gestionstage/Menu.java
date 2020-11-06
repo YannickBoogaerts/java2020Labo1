@@ -25,6 +25,9 @@ public class Menu {
                 case 3:
                     activityCtrlCreateActivity.createActivity();
                     break;
+                case 4:
+                    displayHoraireCtrl.displayHoraireStage();
+                    break;
 
             }
             showMenu();

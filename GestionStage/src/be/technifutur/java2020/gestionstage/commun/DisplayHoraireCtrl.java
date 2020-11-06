@@ -1,10 +1,25 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 public class DisplayHoraireCtrl {
+    /*
+    FIELD
+     */
     private Utility utility;
     private Vue vue;
     private User user;
     private StageList stageList;
+
+    /*
+    METHOD
+     */
+
+    public void displayHoraireStage(){
+
+    }
+
+    /*
+    SETTER
+     */
 
     public void setUtility(Utility utility) {
         this.utility = utility;
