@@ -1,11 +1,11 @@
 package be.technifutur.java2020.gestionstage.commun;
 
+import javax.swing.text.Style;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.time.format.TextStyle;
+import java.util.*;
 
 public class Vue {
 
@@ -53,13 +53,30 @@ public class Vue {
     }
 
     public void afficheHoraire(Stage stage, List<Activity> activityList) {
-        LocalDateTime dateDebutStage = stage.getDateDebut();
+        LocalDate dateDebutStage = stage.getDateDebut().toLocalDate();
         System.out.println("Horaire du stage : " + stage.getIntituleStage());
-
-        while (dateDebutStage.isBefore(stage.getDateFin()) || dateDebutStage.isEqual(stage.getDateFin())) {
-
-
-            dateDebutStage.plusDays(1);
+        System.out.println("" +
+                dateDebutStage.getDayOfWeek().getDisplayName(TextStyle.FULL,Locale.FRANCE).toUpperCase() + " " + //TODO ECRIRE EN FRANCAIS
+                dateDebutStage.getDayOfMonth() + " " +
+                dateDebutStage.getMonth().getDisplayName(TextStyle.FULL,Locale.FRANCE).toUpperCase() + " " + //TODO ECRIRE EN FRANCAIS
+                dateDebutStage.getYear()
+        );
+        for (Activity activity : activityList) {
+            if (dateDebutStage.isBefore(activity.getDateDebut().toLocalDate())) {
+                dateDebutStage = activity.getDateDebut().toLocalDate();
+                System.out.println("" +
+                        dateDebutStage.getDayOfWeek().getDisplayName(TextStyle.FULL,Locale.FRANCE).toUpperCase() + " " + //TODO ECRIRE EN FRANCAIS
+                        dateDebutStage.getDayOfMonth() + " " +
+                        dateDebutStage.getMonth().getDisplayName(TextStyle.FULL,Locale.FRANCE).toUpperCase() + " " + //TODO ECRIRE EN FRANCAIS
+                        dateDebutStage.getYear()
+                );
+            }
+            System.out.print("      " +
+                    activity.getDateDebut().format(DateTimeFormatter.ofPattern("H'h'mm")) + " - " +
+                    activity.getDateDebut().plusMinutes(activity.getDuration()).format(DateTimeFormatter.ofPattern("H'h'mm")) + " " +
+                    activity.getNameActivity() + " " +
+                    "(" + activity.getDuration() + " minutes)" + "\n"
+            );
         }
     }
 }
