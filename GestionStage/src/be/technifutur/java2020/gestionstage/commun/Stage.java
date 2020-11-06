@@ -6,7 +6,8 @@ import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageDoubl
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.LinkedHashSet;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class Stage {
@@ -14,7 +15,7 @@ public class Stage {
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
     private String intituleStage;
-    private Set<Activity> collectionActivity;
+    private Map<String,Activity> mapActivity;
     /*private int nbrParticipantMax;
     private int nbrParticipantInscrit = 0;*/
 
@@ -25,7 +26,7 @@ public class Stage {
         setDateDebut(dateDebut);
         setDateFin(dateFin);
         setIntituleStage(intituleStage);
-        collectionActivity = new LinkedHashSet<>();
+        mapActivity = new HashMap<>();
     }
 
     @Override
@@ -37,15 +38,13 @@ public class Stage {
     }    //TODO mettre dans la vue
 
     public void addActivity(LocalDateTime dateDebut, int duration, String nameActivity) throws ExceptionGestionStage {
-        if (collectionActivity.contains(nameActivity)){
+        if (mapActivity.containsKey(nameActivity)){
             throw new ExceptionGestionStageDoublonActivity("Cette activité existe déjà pour ce stage.");
         }
         if (dateFin.isBefore(dateDebut.plusMinutes(duration))){
             throw new ExceptionGestionStageDate("La durée de l'activité dépasse la fin du stage.");
         }
-        if(!collectionActivity.add(new Activity(dateDebut,duration,nameActivity))){
-            throw new ExceptionGestionStageDoublonActivity("Cette activité existe déjà pour ce stage.");
-        }
+        mapActivity.put(nameActivity,new Activity(dateDebut,duration,nameActivity));
     }
 
     public LocalDateTime getDateDebut() {
@@ -73,8 +72,8 @@ public class Stage {
         this.intituleStage = intituleStage;
     }
 
-    public Set<Activity> getCollectionActivity() {
-        return collectionActivity;
+    public Map<String,Activity> getMapActivity() {
+        return mapActivity;
     }
 
 

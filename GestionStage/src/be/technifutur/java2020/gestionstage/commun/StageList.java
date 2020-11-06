@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class StageList {
-    private Map<String, Stage> mapStage = new TreeMap<>();
+    private Map<String, Stage> mapStage = new HashMap<>();
 
     public void setMapStage(Map<String, Stage> mapStage) {
         this.mapStage = mapStage;

@@ -13,9 +13,6 @@ public class Activity {
         setDuration(duration);
     }
 
-    //TODO Si je fais une LinkedHashSet je dois changer hashcode et l'autre truc. A verifier
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -34,7 +34,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/ActivityCtrlCreateActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/ActivityCtrlCreateActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Stage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -317,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604648455385</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Activité et ajout avec LinkedHashSet&#10;Je dois modifier et faire des test avec une map.">
+      <created>1604653225891</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1604653225891</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,7 +339,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REGEX non fonctionnel&#10;récupération nom non fonctionnel" />
     <MESSAGE value="REGEX non fonctionnel&#10;récupération nom fonctionnel" />
     <MESSAGE value="récupération nom fonctionnel" />
     <MESSAGE value="rien ne va" />
@@ -358,17 +363,18 @@
     <MESSAGE value="NameActivity" />
     <MESSAGE value="Verif dateFin valide datedebut+duration" />
     <MESSAGE value="on change tout, youpi" />
-    <option name="LAST_COMMIT_MESSAGE" value="on change tout, youpi" />
+    <MESSAGE value="Activité et ajout avec LinkedHashSet&#10;Je dois modifier et faire des test avec une map." />
+    <option name="LAST_COMMIT_MESSAGE" value="Activité et ajout avec LinkedHashSet&#10;Je dois modifier et faire des test avec une map." />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1604646840232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604646840232" />
-    <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604589792049">
+    <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604653539762">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604589792049" />
+    <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604653539762" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604486701655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -377,22 +383,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604652121537" />
-    <state width="1921" height="984" key="GridCell.Tab.0.bottom" timestamp="1604652819087">
+    <state width="1921" height="984" key="GridCell.Tab.0.bottom" timestamp="1604653304846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="984" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604652819087" />
-    <state width="1921" height="984" key="GridCell.Tab.0.center" timestamp="1604652819086">
+    <state width="1921" height="984" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604653304846" />
+    <state width="1921" height="984" key="GridCell.Tab.0.center" timestamp="1604653304846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="984" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604652819086" />
-    <state width="1921" height="984" key="GridCell.Tab.0.left" timestamp="1604652819086">
+    <state width="1921" height="984" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604653304846" />
+    <state width="1921" height="984" key="GridCell.Tab.0.left" timestamp="1604653304846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="984" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604652819086" />
-    <state width="1921" height="984" key="GridCell.Tab.0.right" timestamp="1604652819086">
+    <state width="1921" height="984" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604653304846" />
+    <state width="1921" height="984" key="GridCell.Tab.0.right" timestamp="1604653304846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="984" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604652819086" />
+    <state width="1921" height="984" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604653304846" />
     <state width="1877" height="274" key="GridCell.Tab.1.bottom" timestamp="1604647488091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
