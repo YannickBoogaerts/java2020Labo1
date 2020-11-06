@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f5ed3b4-f3b5-43b4-9edb-86715fe2723d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/Controler/CreationStage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/Factory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/model/StageList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/utility/Saisie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/utility/SaisieException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7bc995ef-ebdd-45bc-b165-a967084bacb6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/Factory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,136 +13,29 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5053619">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/GestionStage.iml">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/model/Stage.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="441">
-                  <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#386#387#0" expanded="true" />
-                    <element signature="e#413#414#0" expanded="true" />
-                    <element signature="e#453#454#0" expanded="true" />
-                    <element signature="e#485#486#0" expanded="true" />
-                    <element signature="e#524#525#0" expanded="true" />
-                    <element signature="e#552#553#0" expanded="true" />
-                    <element signature="e#601#602#0" expanded="true" />
-                    <element signature="e#635#636#0" expanded="true" />
-                    <element signature="e#672#673#0" expanded="true" />
-                    <element signature="e#698#699#0" expanded="true" />
-                    <element signature="e#743#744#0" expanded="true" />
-                    <element signature="e#773#774#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/Controler/CreationStage.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="307">
-                  <caret line="37" selection-start-line="37" selection-end-line="37" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#310#311#0" expanded="true" />
-                    <element signature="e#352#353#0" expanded="true" />
-                    <element signature="e#569#570#0" expanded="true" />
-                    <element signature="e#613#614#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/Factory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="60" column="59" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1514#1515#0" expanded="true" />
-                    <element signature="e#1557#1558#0" expanded="true" />
-                    <element signature="e#2452#2453#0" expanded="true" />
-                    <element signature="e#2500#2501#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/utility/Saisie.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/utility/Saisie.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96">
-                  <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#449#450#0" expanded="true" />
-                    <element signature="e#485#486#0" expanded="true" />
-                    <element signature="e#553#554#0" expanded="true" />
-                    <element signature="e#603#604#0" expanded="true" />
-                    <element signature="e#664#665#0" expanded="true" />
-                    <element signature="e#706#707#0" expanded="true" />
-                    <element signature="e#763#764#0" expanded="true" />
-                    <element signature="e#799#800#0" expanded="true" />
-                    <element signature="e#855#856#0" expanded="true" />
-                    <element signature="e#903#904#0" expanded="true" />
-                    <element signature="e#959#960#0" expanded="true" />
-                    <element signature="e#1007#1008#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/utility/SaisieException.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#151#152#0" expanded="true" />
-                    <element signature="e#174#175#0" expanded="true" />
-                    <element signature="e#254#255#0" expanded="true" />
-                    <element signature="e#274#275#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GestionStage.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/Factory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="76" column="69" selection-start-line="76" selection-start-column="69" selection-end-line="76" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -196,12 +82,27 @@
             <path>
               <item name="GestionStage" type="b2602c69:ProjectViewProjectNode" />
               <item name="GestionStage" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GestionStage" type="b2602c69:ProjectViewProjectNode" />
               <item name="GestionStage" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gestionStage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionStage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionStage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gestionStage" type="462c0819:PsiDirectoryNode" />
+              <item name="utility" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GestionStage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GestionStage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gestionStage" type="462c0819:PsiDirectoryNode" />
+              <item name="Factory" type="1a9f42e2:ClassTreeNode" />
             </path>
           </expand>
           <select />
@@ -271,18 +172,13 @@
     <frame x="-1927" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16152816" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32894737" />
@@ -290,14 +186,19 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -351,7 +252,11 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GestionStage.iml">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/model/Stage.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -438,14 +343,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/be/technifutur/java202/gestionStage/Factory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="60" column="59" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
+        <state relative-caret-position="225">
+          <caret line="76" column="69" selection-start-line="76" selection-start-column="69" selection-end-line="76" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
-            <element signature="e#1557#1558#0" expanded="true" />
-            <element signature="e#2452#2453#0" expanded="true" />
-            <element signature="e#2500#2501#0" expanded="true" />
           </folding>
         </state>
       </provider>

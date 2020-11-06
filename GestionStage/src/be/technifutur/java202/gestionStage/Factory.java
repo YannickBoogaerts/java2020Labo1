@@ -32,7 +32,7 @@ public class Factory {
     private Saisie<String> getSaisieName() {
         if (this.saisieName == null) {
             this.saisieName = new Saisie<String>();
-            this.saisieName.setPrompt(" Nom :");
+            this.saisieName.setPrompt(" Nom : ");
             this.saisieName.setPredicate((s)-> s.trim().length()>0);
             this.saisieName.setMapper((s)-> s.trim());
             this.saisieName.setErrorMessage("le nom ne peut pas être vide");
@@ -58,7 +58,7 @@ public class Factory {
     private Saisie<LocalDateTime> getSaisieFin() {
         if (this.saisieFin == null) {
             this.saisieFin = new Saisie<LocalDateTime>();
-            this.saisieFin.setPrompt(" Date de fin ( j/m/aa hh:mm ) :");
+            this.saisieFin.setPrompt(" Date de fin ( j/m/aa hh:mm ) : ");
             this.saisieFin.setMapper(
                     (s)-> LocalDateTime.parse(s,getDateFormater()));
             this.saisieFin.setErrorMessage("la date ne respecte pas le format");
@@ -74,7 +74,7 @@ public class Factory {
     private Saisie<LocalDateTime> getSaisieDebut() {
         if (this.saisieDebut == null) {
             this.saisieDebut = new Saisie<LocalDateTime>();
-            this.saisieDebut.setPrompt(" Date de début ( jj/mm/aaaa hh:mm ) :");
+            this.saisieDebut.setPrompt(" Date de début ( j/m/aa hh:mm ) : ");
             this.saisieDebut.setMapper(
                     (s)-> LocalDateTime.parse(s,getDateFormater()));
             this.saisieDebut.setErrorMessage("la date ne respecte pas le format");
