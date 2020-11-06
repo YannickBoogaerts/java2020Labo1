@@ -37,12 +37,6 @@ public class Utility {
         return date;
     }
 
-    private String getInput() {
-        String inputDate;
-        vue.consigneAjoutDateStage();
-        inputDate = user.getInput();
-        return inputDate;
-    }
 
     public OptionalInt saisirDuree() {
         OptionalInt optionalInt = OptionalInt.empty();
@@ -71,6 +65,20 @@ public class Utility {
         return parse;
     }
 
+    /*
+    GET INPUT USER
+     */
+
+    private String getInput() {
+        String inputDate;
+        vue.consigneAjoutDateStage();
+        inputDate = user.getInput();
+        return inputDate;
+    }
+
+    /*
+    SETTER
+     */
     public void setUser(User user) {
         this.user = user;
     }

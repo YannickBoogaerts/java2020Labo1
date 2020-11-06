@@ -39,7 +39,7 @@ public class StageCtrlCreateStage {
             try {
                 stageList.addStage(dateDebut, dateFin, name);
                 Stage stage = stageList.getStage(name);
-                vue.affichageStage(stage);
+                vue.afficheStage(stage);
             } catch (ExceptionGestionStage e) {
                 vue.setError(e.getMessage());
             }

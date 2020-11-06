@@ -7,7 +7,7 @@ public class Activity {
     private LocalDateTime dateDebut;
     private int duration;
 
-    public Activity(LocalDateTime dateDebut, int duration, String nameStage) {
+    public Activity(LocalDateTime dateDebut, int duration, String nameActivity) {
         setNameActivity(nameActivity);
         setDateDebut(dateDebut);
         setDuration(duration);

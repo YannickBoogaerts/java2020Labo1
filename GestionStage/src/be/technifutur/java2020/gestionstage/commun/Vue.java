@@ -2,6 +2,10 @@ package be.technifutur.java2020.gestionstage.commun;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 public class Vue {
 
@@ -36,8 +40,8 @@ public class Vue {
         System.out.println(message);
     }
 
-    public void affichageStage(Stage stage) {
-        System.out.println("\n" + stage);
+    public void afficheStage(Stage stage) {
+        afficheStage(stage.getIntituleStage(), stage.getDateDebut(), stage.getDateFin());
     }
 
     public void afficheStage(String name, LocalDateTime dateDebut, LocalDateTime dateFin) {
@@ -46,5 +50,16 @@ public class Vue {
                 "Début du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) + "\n" +
                 "Fin du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) + "\n"
         );
+    }
+
+    public void afficheHoraire(Stage stage, List<Activity> activityList) {
+        LocalDateTime dateDebutStage = stage.getDateDebut();
+        System.out.println("Horaire du stage : " + stage.getIntituleStage());
+
+        while (dateDebutStage.isBefore(stage.getDateFin()) || dateDebutStage.isEqual(stage.getDateFin())) {
+
+
+            dateDebutStage.plusDays(1);
+        }
     }
 }
