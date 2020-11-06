@@ -3,17 +3,17 @@ package be.technifutur.java2020.gestionstage.commun;
 public class Vue {
 
     public void consigneAjoutNomStage() {
-        System.out.println("Veuillez choisir un nom de stage");
+        System.out.println("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
     }
 
     public void consigneAjoutNomActivity() {
-        System.out.println("Veuillez choisir un nom d'activitée");
+        System.out.println("Veuillez choisir un nom d'activitée ou insérer \"q\" pour quitter");
     }
 
     public void consigneAjoutDuree() {
         System.out.println("" +
                 "Veuillez saisir une durée en minute ou \"q\" pour quitter." +
-                "Une durée d'activité doit être supérieur à 0 minutes"
+                "Une durée d'activitée doit être supérieure à 0 minute"
         );
     }
 

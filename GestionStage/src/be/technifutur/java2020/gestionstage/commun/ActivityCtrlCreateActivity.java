@@ -4,7 +4,6 @@ import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageNomIn
 
 import java.time.LocalDateTime;
 import java.util.Collection;
-import java.util.Map;
 import java.util.OptionalInt;
 
 public class ActivityCtrlCreateActivity {
@@ -14,7 +13,7 @@ public class ActivityCtrlCreateActivity {
     private StageList stageList;
 
     public void createActivity() {
-        String nameActivity, nameStage;
+        String nameActivity=null, nameStage;
         int duration;
         LocalDateTime dateDebut = null;
         boolean createStage = true;
@@ -25,7 +24,23 @@ public class ActivityCtrlCreateActivity {
             vue.consigneAjoutNomStage();
             nameStage = user.getInput();
         }
-        createStage = nameStageIsValid(nameStage);
+        if (nameStage.equalsIgnoreCase("q")) {
+            createStage = false;
+        } else {
+            createStage = nameStageIsValid(nameStage);
+        }
+
+        if (createStage) {
+            vue.consigneAjoutNomActivity();
+            nameActivity = user.getInput();
+            while (nameActivity.isEmpty()) {
+                vue.consigneAjoutNomActivity();
+                nameActivity = user.getInput();
+            }
+        }
+        if (nameActivity.equalsIgnoreCase("q")){
+            createStage=false;
+        }
 
         if (createStage) {
             vue.ajoutDateDebut();
@@ -34,7 +49,7 @@ public class ActivityCtrlCreateActivity {
                 createStage = false;
             }
         }
-        //TODO NOM DE L ACTIVITE PARDI !
+
 
         if (createStage) {
             OptionalInt inputDuration;
@@ -46,6 +61,7 @@ public class ActivityCtrlCreateActivity {
                 duration = inputDuration.getAsInt();
             }
         }
+
         if (createStage) {
             //TODO CREER ET INSERER L ACTIVITE
         }
