@@ -1,15 +1,13 @@
 package be.technifutur.java2020.gestionstage;
 
-import be.technifutur.java2020.gestionstage.commun.ActivityCtrlCreateActivity;
-import be.technifutur.java2020.gestionstage.commun.StageCtrlCreateStage;
-import be.technifutur.java2020.gestionstage.commun.StageCtrlDisplayStage;
-import be.technifutur.java2020.gestionstage.commun.User;
+import be.technifutur.java2020.gestionstage.commun.*;
 
 public class Menu {
     String input = null;
     private StageCtrlCreateStage stageCtrlCreateStage;
     private StageCtrlDisplayStage stageCtrlDisplayStage;
     private ActivityCtrlCreateActivity activityCtrlCreateActivity;
+    private DisplayHoraireCtrl displayHoraireCtrl;
     private User user;
 
     public void displayMenu() {
@@ -40,6 +38,7 @@ public class Menu {
                 "1. Créer un stage.\n" +
                 "2. Liste des stages.\n" +
                 "3. Créer une activitée\n" +
+                "4. Afficher l'horaire d'un stage\n" +
                 "q. Quitter l'application.");
     }
 
@@ -59,4 +58,7 @@ public class Menu {
         this.activityCtrlCreateActivity = activityCtrlCreateActivity;
     }
 
+    public void setDisplayHoraireCtrl(DisplayHoraireCtrl displayHoraireCtrl) {
+        this.displayHoraireCtrl = displayHoraireCtrl;
+    }
 }

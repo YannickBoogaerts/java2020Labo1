@@ -1,7 +1,6 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStage;
-import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageDoublonActivity;
 import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageNomInvalide;
 
 import java.time.LocalDateTime;

@@ -1,5 +1,8 @@
 package be.technifutur.java2020.gestionstage.commun;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Vue {
 
     public void consigneAjoutNomStage() {
@@ -35,5 +38,13 @@ public class Vue {
 
     public void affichageStage(Stage stage) {
         System.out.println("\n" + stage);
+    }
+
+    public void afficheStage(String name, LocalDateTime dateDebut, LocalDateTime dateFin) {
+        System.out.println("" +
+                "Nom du stage : " + name + "\n" +
+                "Début du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) + "\n" +
+                "Fin du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) + "\n"
+        );
     }
 }

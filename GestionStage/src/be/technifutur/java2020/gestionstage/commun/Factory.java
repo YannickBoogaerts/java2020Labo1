@@ -3,6 +3,10 @@ package be.technifutur.java2020.gestionstage.commun;
 import be.technifutur.java2020.gestionstage.Menu;
 
 public class Factory {
+
+    /*
+    CONSTRUCTEUR
+     */
     public Factory() {
 
     }
@@ -11,13 +15,22 @@ public class Factory {
         this.user = user;
     }
 
+    /*
+    FIELD
+     */
+
     private StageList stageList;
     private Vue vue;
     private StageCtrlCreateStage stageCtrlCreateStage;
     private StageCtrlDisplayStage stageCtrlDisplayStage;
     private ActivityCtrlCreateActivity activityCtrlCreateActivity;
+    private DisplayHoraireCtrl displayHoraireCtrl;
     private Utility utility;
     private User user;
+
+    /*
+    METHOD
+     */
 
 
     public Menu getMenu() {
@@ -25,6 +38,7 @@ public class Factory {
         menu.setStageCtrlCreateStage(getStageCtrlCreateStage());
         menu.setStageCtrlDisplayStage(getStageCtrlDisplayStage());
         menu.setActivityCtrlCreateActivity(getActivityCtrlCreateActivity());
+        menu.setDisplayHoraireCtrl(getDisplayHoraireCtrl());
         menu.setUser(getUser());
         return menu;
     }
@@ -92,4 +106,15 @@ public class Factory {
         return activityCtrlCreateActivity;
     }
 
+    public DisplayHoraireCtrl getDisplayHoraireCtrl() {
+        if (this.displayHoraireCtrl==null){
+            this.displayHoraireCtrl = new DisplayHoraireCtrl();
+            displayHoraireCtrl.setStageList(getStageList());
+            displayHoraireCtrl.setUser(getUser());
+            displayHoraireCtrl.setUtility(getUtility());
+            displayHoraireCtrl.setVue(getVue());
+        }
+
+        return displayHoraireCtrl;
+    }
 }

@@ -34,7 +34,7 @@ public class Main {
                 "Ztage",
                 "Java base 1",
                 "10.10.2020.08.00",
-                "60",
+                "260",
                 "3",
                 "Ztage",
                 "Java base 2",

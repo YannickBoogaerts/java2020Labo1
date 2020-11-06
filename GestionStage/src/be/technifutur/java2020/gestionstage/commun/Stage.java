@@ -5,10 +5,8 @@ import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageDate;
 import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageDoublonActivity;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class Stage {
 
@@ -28,14 +26,6 @@ public class Stage {
         setIntituleStage(intituleStage);
         mapActivity = new HashMap<>();
     }
-
-    @Override
-    public String toString() {
-        return "Intitule du stage : " + intituleStage + ".\n" +
-                "Date de début du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) +
-                ".\nDate de fin du stage : " + dateFin.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm"))+"\n";
-
-    }    //TODO mettre dans la vue
 
     public void addActivity(LocalDateTime dateDebut, int duration, String nameActivity) throws ExceptionGestionStage {
         if (mapActivity.containsKey(nameActivity)){
