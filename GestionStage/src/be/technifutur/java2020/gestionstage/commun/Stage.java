@@ -1,10 +1,11 @@
 package be.technifutur.java2020.gestionstage.commun;
 
+import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStage;
 import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageDate;
+import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageDoublonActivity;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -14,7 +15,6 @@ public class Stage {
     private LocalDateTime dateFin;
     private String intituleStage;
     private Set<Activity> collectionActivity;
-    //TODO list of activity
     /*private int nbrParticipantMax;
     private int nbrParticipantInscrit = 0;*/
 
@@ -35,6 +35,18 @@ public class Stage {
                 ".\nDate de fin du stage : " + dateFin.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm"))+"\n";
 
     }    //TODO mettre dans la vue
+
+    public void addActivity(LocalDateTime dateDebut, int duration, String nameActivity) throws ExceptionGestionStage {
+        if (collectionActivity.contains(nameActivity)){
+            throw new ExceptionGestionStageDoublonActivity("Cette activité existe déjà pour ce stage.");
+        }
+        if (dateFin.isBefore(dateDebut.plusMinutes(duration))){
+            throw new ExceptionGestionStageDate("La durée de l'activité dépasse la fin du stage.");
+        }
+        if(!collectionActivity.add(new Activity(dateDebut,duration,nameActivity))){
+            throw new ExceptionGestionStageDoublonActivity("Cette activité existe déjà pour ce stage.");
+        }
+    }
 
     public LocalDateTime getDateDebut() {
         return dateDebut;
@@ -64,6 +76,8 @@ public class Stage {
     public Set<Activity> getCollectionActivity() {
         return collectionActivity;
     }
+
+
 
    /* public int getNbrParticipantMax() {
         return nbrParticipantMax;

@@ -1,5 +1,7 @@
 package be.technifutur.java2020.gestionstage.commun;
 
+import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStage;
+import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageDoublonActivity;
 import be.technifutur.java2020.gestionstage.exception.ExceptionGestionStageNomInvalide;
 
 import java.time.LocalDateTime;
@@ -62,7 +64,12 @@ public class ActivityCtrlCreateActivity {
         }
 
         if (createStage) {
-
+            Stage stage = stageList.getStage(nameStage);
+            try {
+                stage.addActivity(dateDebut,duration,nameActivity);
+            } catch (ExceptionGestionStage e) {
+                vue.setError(e.getMessage());
+            }
         }
     }
 
@@ -76,7 +83,7 @@ public class ActivityCtrlCreateActivity {
             if (collection.contains(nameStage)) {
                 isValid = true;
             } else {
-                throw new ExceptionGestionStageNomInvalide("Le stage n'existe pas");
+                throw new ExceptionGestionStageNomInvalide("Le stage entré n'existe pas");
             }
         } catch (ExceptionGestionStageNomInvalide e) {
             vue.setError(e.getMessage());
