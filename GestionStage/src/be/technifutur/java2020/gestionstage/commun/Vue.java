@@ -48,7 +48,7 @@ public class Vue {
         System.out.println("" +
                 "Nom du stage : " + name + "\n" +
                 "Début du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) + "\n" +
-                "Fin du stage : " + dateDebut.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) + "\n"
+                "Fin du stage : " + dateFin.format(DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm")) + "\n"
         );
     }
 
