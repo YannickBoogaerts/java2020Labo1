@@ -24,11 +24,12 @@ public class ParticipantCtrlGestion {
             if (!nomParticipant.isEmpty()) {
                 prenomParticipant = utility.saisirName("Veuillez saisir le prénom du participant. Insérer \"q\" pour quitter");
                 if (!prenomParticipant.isEmpty()) {
+                    String IDParticipant = nomParticipant.concat(prenomParticipant);
                     Stage stage = stageList.getStage(nameStage);
                     if (stage.getMapParticipant().containsKey(nomParticipant.concat(prenomParticipant))) {
-                        modifParticipant(nomParticipant, prenomParticipant, stage);//envoyer un participant !!!
+                        modifParticipant(participantList.getParticipant(IDParticipant));//envoyer un participant !!!
                     } else {
-                        createParticipant(nomParticipant, prenomParticipant, stage);
+                        createParticipant(IDParticipant,nomParticipant, prenomParticipant, stage);
                     }
                 }
             }
@@ -36,15 +37,17 @@ public class ParticipantCtrlGestion {
     }
 
     //Modification d'information d'un participant
-    private void modifParticipant(String nomParticipant, String prenomParticipant, Stage stage) {
+    private void modifParticipant(Participant participant) {
 
     }
 
     //Creation d'un participant
-    private void createParticipant(String nomParticipant, String prenomParticipant, Stage stage) {
+    private void createParticipant(String IDParticipant, String nomParticipant, String prenomParticipant, Stage stage) {
         String mailParticipant, clubParticipant;
         clubParticipant = utility.saisirName("Veuillez saisir le nom du club du participant ou insérer \"q\" pour laisser vide.");
         mailParticipant = utility.saisirMail("Veuillez saisir l'adresse mail du participant ou insérer \"q\" pour laisser vide.");
+        Participant participant = stage.createParticipant(IDParticipant,nomParticipant,prenomParticipant,clubParticipant,mailParticipant);
+        participantList.addParticipant(IDParticipant,participant);
     }
 
 

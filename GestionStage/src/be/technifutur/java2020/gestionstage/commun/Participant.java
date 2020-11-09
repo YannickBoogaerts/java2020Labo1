@@ -19,18 +19,17 @@ public class Participant {
     CONSTRUCTOR
      */
 
-    public Participant(String nomParticipant, String prenomParticipant, String nomClub, String adresseMail) {
-        this.nomParticipant = nomParticipant.toUpperCase();
-        this.prenomParticipant = prenomParticipant.toUpperCase();
-        this.nomClub = nomClub;
-        this.adresseMail = adresseMail;
+    public Participant(String nomParticipant, String prenomParticipant, String nomClub, String adresseMail, Stage stage) {
+        setNomParticipant(nomParticipant.toUpperCase());
+        setPrenomParticipant(prenomParticipant.toUpperCase());
+        setNomClub(nomClub);
+        setAdresseMail(adresseMail);
+        listStageParticipant.put(stage.getIntituleStage(),stage);
     }
 
     /*
     METHOD
      */
-
-
 
     /*
     SETTER AND GETTER

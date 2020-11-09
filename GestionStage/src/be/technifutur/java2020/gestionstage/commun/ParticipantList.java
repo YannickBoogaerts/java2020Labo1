@@ -21,6 +21,10 @@ public class ParticipantList {
     GETTER AND SETTER
      */
 
+    public Participant getParticipant(String IDParticipant){
+        return mapParticipant.get(IDParticipant);
+    }
+
     public Map<String, Participant> getMapParticipant() {
         return mapParticipant;
     }

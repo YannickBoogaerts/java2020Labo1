@@ -91,8 +91,10 @@ public class Utility {
             input = user.getInput();
             matcher = pattern.matcher(input);
         }
-
-        return null;
+        if (input.equalsIgnoreCase("q")){
+            input="";
+        }
+        return input;
     }
 
     /*

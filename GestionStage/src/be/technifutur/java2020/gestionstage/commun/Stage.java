@@ -10,12 +10,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Stage {
+    /*
+    FIELD
+     */
 
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
     private String intituleStage;
     private Map<String, Activity> mapActivity;
     private Map<String, Participant> mapParticipant;
+
+    /*
+    CONSTRUCTOR
+     */
 
     public Stage(LocalDateTime dateDebut, LocalDateTime dateFin, String intituleStage) throws ExceptionGestionStageDate {
         if (dateFin.isBefore(dateDebut)) {
@@ -27,6 +34,10 @@ public class Stage {
         mapActivity = new HashMap<>();
         mapParticipant = new HashMap<>();
     }
+
+    /*
+    METHOD
+     */
 
     public void addActivity(LocalDateTime dateDebut, int duration, String nameActivity) throws ExceptionGestionStage {
         if (mapActivity.containsKey(nameActivity)) {
@@ -45,6 +56,12 @@ public class Stage {
 
     public Collection<Activity> getActivityCollection() {
         return mapActivity.values();
+    }
+
+    public Participant createParticipant(String IDParticipant,String nomParticipant, String prenomParticipant, String clubParticipant, String mailParticipant) {
+        Participant participant = new Participant(nomParticipant, prenomParticipant, clubParticipant, mailParticipant, this);
+        this.mapParticipant.put(IDParticipant,participant);
+        return participant;
     }
 
     /*
@@ -83,4 +100,6 @@ public class Stage {
     public void setMapParticipant(Map<String, Participant> mapParticipant) {
         this.mapParticipant = mapParticipant;
     }
+
+
 }
