@@ -77,16 +77,35 @@ public class Vue {
     }
 
     public void afficheParticipant(Participant participant) {
+        Collection<Stage> stageCollection = participant.getListStageParticipant().values();
         System.out.println("" +
                 "Nom du participant : " + participant.getNomParticipant() + "\n" +
                 "Prénom du participant : " + participant.getPrenomParticipant()
         );
-        if (!participant.getNomClub().isEmpty())
+        if (!participant.getNomClub().isEmpty()) {
             System.out.println("Nom du club du participant : " + participant.getNomClub());
+        }
 
-        if (!participant.getAdresseMail().isEmpty())
+        if (!participant.getAdresseMail().isEmpty()) {
             System.out.println("Adresse mail du participant : " + participant.getAdresseMail());
+        }
+        System.out.println("Liste des stages auquel le participant est inscrit : ");
+        for (Stage stage : stageCollection) {
+            System.out.println("     " + stage.getIntituleStage());
+        }
+    }
 
+    public String displayModifParticipant() {
+
+        return "" +
+                "Veuillez choisir une option : \n" +
+                "1. Modifier l'adresse mail.\n" +
+                "2. Modifier le nom du club.\n" +
+                "3. Ajouter un stage au participant.\n" +
+                "4. Retirer un stage au participant;\n" +
+                "q. Quitter la modification.";
 
     }
+
+
 }

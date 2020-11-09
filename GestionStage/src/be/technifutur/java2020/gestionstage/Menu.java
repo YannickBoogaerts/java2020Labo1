@@ -6,6 +6,7 @@ public class Menu {
     private String input = null;
     private StageCtrlCreateStage stageCtrlCreateStage;
     private StageCtrlDisplayStage stageCtrlDisplayStage;
+    private ParticipantCtrlDisplay participantCtrlDisplay;
     private MenuGestionStage menuGestionStage;
     private User user;
 
@@ -25,6 +26,9 @@ public class Menu {
                 case 3:
                     menuGestionStage.menu();
                     break;
+                case 4:
+                    participantCtrlDisplay.displayParticipant();
+                    break;
 
             }
             showMenu();
@@ -38,6 +42,7 @@ public class Menu {
                 "1. Créer un stage.\n" +
                 "2. Afficher les stages\n" +
                 "3. Gestion des stages.\n" +
+                "4. Afficher les participants\n" +
                 "q. Quitter l'application.");
     }
 
@@ -55,5 +60,9 @@ public class Menu {
 
     public void setMenuGestionStage(MenuGestionStage menuGestionStage) {
         this.menuGestionStage = menuGestionStage;
+    }
+
+    public void setParticipantCtrlDisplay(ParticipantCtrlDisplay participantCtrlDisplay) {
+        this.participantCtrlDisplay = participantCtrlDisplay;
     }
 }

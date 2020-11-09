@@ -31,6 +31,7 @@ public class Factory {
     private ActivityCtrlCreateActivity activityCtrlCreateActivity;
     private DisplayHoraireCtrl displayHoraireCtrl;
     private ParticipantCtrlGestion participantCtrlGestion;
+    private ParticipantCtrlDisplay participantCtrlDisplay;
 
     /*
     METHOD
@@ -43,6 +44,7 @@ public class Factory {
         menu.setStageCtrlDisplayStage(getStageCtrlDisplayStage());
         menu.setMenuGestionStage(getMenuGestionStage());
         menu.setUser(getUser());
+        menu.setParticipantCtrlDisplay(getParticipantCtrlDisplay());
         return menu;
     }
 
@@ -151,4 +153,12 @@ public class Factory {
         return participantCtrlGestion;
     }
 
+    public ParticipantCtrlDisplay getParticipantCtrlDisplay() {
+        if (participantCtrlDisplay==null){
+            this.participantCtrlDisplay = new ParticipantCtrlDisplay();
+            participantCtrlDisplay.setParticipantList(getParticipantList());
+            participantCtrlDisplay.setVue(getVue());
+        }
+        return participantCtrlDisplay;
+    }
 }

@@ -66,6 +66,11 @@ public class Utility {
         return parse;
     }
 
+    /**
+     *
+     * @param consigne du message à afficher
+     * @return une string ou empty si on a quitter l'insertion
+     */
     public String saisirName(String consigne) {
         String nameStage;
         vue.afficheMessage(consigne);

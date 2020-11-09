@@ -17,8 +17,7 @@ public class ParticipantCtrlGestion {
      */
 
     public void gestionParticipant() {
-        String nomParticipant, prenomParticipant, nameStage;
-
+        String nomParticipant, prenomParticipant;
         nomParticipant = utility.saisirName("Veuillez saisir le nom du participant. Insérer \"q\" pour quitter");
         if (!nomParticipant.isEmpty()) {
             prenomParticipant = utility.saisirName("Veuillez saisir le prénom du participant. Insérer \"q\" pour quitter");
@@ -31,13 +30,54 @@ public class ParticipantCtrlGestion {
                 }
             }
         }
-
     }
 
     //Modification d'information d'un participant
     private void modifParticipant(Participant participant) {
-        vue.afficheMessage("Données du Participant : ");
-        vue.afficheParticipant(participant);
+        String inputChoice;
+        int choice;
+        vue.afficheMessage("Le participant existe déjà.");
+        do {
+            vue.afficheMessage("Données du Participant : ");
+            vue.afficheParticipant(participant);
+            inputChoice = utility.saisirName(vue.displayModifParticipant());
+            if (!inputChoice.isEmpty()) {
+                choice = Integer.parseInt(inputChoice);
+                String club;
+                String mail;
+                String nameStage;
+                switch (choice) {
+                    case 1:
+                        mail = utility.saisirMail("Veuillez saisir une adresse email ou \"q\" pour mettre à vide");
+                        participant.setAdresseMail(mail);
+                        break;
+                    case 2:
+                        club = utility.saisirName("Veuillez saisir un nom de club ou \"q\" pour mettre à vide");
+                        participant.setNomClub(club);
+                        break;
+                    case 3:
+                        nameStage = utility.saisirName("Veuillez insérer le nom du stage a ajouté au participant. Insérer \"q\" pour quitter");
+                        while (!stageList.getMap().containsKey(nameStage) && !nameStage.isEmpty()) {
+                            inputChoice = utility.saisirName("Veuillez insérer le nom du stage a ajouté au participant. Insérer \"q\" pour quitter");
+                        }
+                        if (!nameStage.isEmpty()) {
+                            Stage stage = stageList.getStage(nameStage);
+                            participant.getListStageParticipant().putIfAbsent(stage.getIntituleStage(), stage);
+                        }
+                        break;
+                    case 4:
+                        nameStage = utility.saisirName("Veuillez insérer le nom du stage a retiré au participant. Insérer \"q\" pour quitter");
+                        while (!stageList.getMap().containsKey(nameStage) && !nameStage.isEmpty()) {
+                            nameStage = utility.saisirName("Veuillez insérer le nom du stage a ajouté au participant. Insérer \"q\" pour quitter");
+                        }
+                        if (!nameStage.isEmpty()) {
+                            Stage stage = stageList.getStage(nameStage);
+                            participant.getListStageParticipant().remove(stage.getIntituleStage(), stage);
+                        }
+                        break;
+                }
+            }
+        } while (!inputChoice.isEmpty());
     }
 
     //Creation d'un participant
@@ -50,8 +90,8 @@ public class ParticipantCtrlGestion {
         }
         if (!nameStage.isEmpty()) {
             Stage stage = stageList.getStage(nameStage);
-            clubParticipant = utility.saisirName("Veuillez saisir le nom du club du participant ou insérer \"q\" pour laisser vide.");
-            mailParticipant = utility.saisirMail("Veuillez saisir l'adresse mail du participant ou insérer \"q\" pour laisser vide.");
+            clubParticipant = utility.saisirName("Veuillez saisir le nom du club du participant ou insérer \"q\" pour laisser le champ vide.");
+            mailParticipant = utility.saisirMail("Veuillez saisir l'adresse mail du participant ou insérer \"q\" pour laisser le champ vide.");
             Participant participant = stage.createParticipant(IDParticipant, nomParticipant, prenomParticipant, clubParticipant, mailParticipant);
             participantList.addParticipant(IDParticipant, participant);
         }

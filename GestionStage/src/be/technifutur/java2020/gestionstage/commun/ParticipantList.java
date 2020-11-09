@@ -1,5 +1,6 @@
 package be.technifutur.java2020.gestionstage.commun;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,5 +32,9 @@ public class ParticipantList {
 
     public void setMapParticipant(Map<String, Participant> mapParticipant) {
         this.mapParticipant = mapParticipant;
+    }
+
+    public Collection<Participant> getCollectionParticipant(){
+        return mapParticipant.values();
     }
 }
