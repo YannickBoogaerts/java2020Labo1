@@ -3,11 +3,10 @@ package be.technifutur.java2020.gestionstage;
 import be.technifutur.java2020.gestionstage.commun.*;
 
 public class Menu {
-    String input = null;
+    private String input = null;
     private StageCtrlCreateStage stageCtrlCreateStage;
     private StageCtrlDisplayStage stageCtrlDisplayStage;
-    private ActivityCtrlCreateActivity activityCtrlCreateActivity;
-    private DisplayHoraireCtrl displayHoraireCtrl;
+    private MenuGestionStage menuGestionStage;
     private User user;
 
     public void displayMenu() {
@@ -23,10 +22,7 @@ public class Menu {
                     stageCtrlDisplayStage.displayStage();
                     break;
                 case 3:
-                    activityCtrlCreateActivity.createActivity();
-                    break;
-                case 4:
-                    displayHoraireCtrl.displayHoraireStage();
+                    menuGestionStage.menu();
                     break;
 
             }
@@ -39,9 +35,8 @@ public class Menu {
         System.out.println("" +
                 "Veuillez choisir une option.\n" +
                 "1. Créer un stage.\n" +
-                "2. Liste des stages.\n" +
-                "3. Créer une activitée\n" + /* repack 3 et 4 dans un sous-menu */
-                "4. Afficher l'horaire d'un stage\n" +
+                "2. Afficher les stages\n" +
+                "3. Gestion des stages.\n" + /* repack 3 et 4 dans un sous-menu */
                 "q. Quitter l'application.");
     }
 
@@ -57,11 +52,7 @@ public class Menu {
         this.stageCtrlDisplayStage = stageCtrlDisplayStage;
     }
 
-    public void setActivityCtrlCreateActivity(ActivityCtrlCreateActivity activityCtrlCreateActivity) {
-        this.activityCtrlCreateActivity = activityCtrlCreateActivity;
-    }
-
-    public void setDisplayHoraireCtrl(DisplayHoraireCtrl displayHoraireCtrl) {
-        this.displayHoraireCtrl = displayHoraireCtrl;
+    public void setMenuGestionStage(MenuGestionStage menuGestionStage) {
+        this.menuGestionStage = menuGestionStage;
     }
 }

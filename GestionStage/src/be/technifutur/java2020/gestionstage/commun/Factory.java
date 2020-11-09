@@ -1,6 +1,7 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 import be.technifutur.java2020.gestionstage.Menu;
+import be.technifutur.java2020.gestionstage.MenuGestionStage;
 
 public class Factory {
 
@@ -25,6 +26,7 @@ public class Factory {
     private StageCtrlDisplayStage stageCtrlDisplayStage;
     private ActivityCtrlCreateActivity activityCtrlCreateActivity;
     private DisplayHoraireCtrl displayHoraireCtrl;
+    private MenuGestionStage menuGestionStage;
     private Utility utility;
     private User user;
 
@@ -37,8 +39,7 @@ public class Factory {
         Menu menu = new Menu();
         menu.setStageCtrlCreateStage(getStageCtrlCreateStage());
         menu.setStageCtrlDisplayStage(getStageCtrlDisplayStage());
-        menu.setActivityCtrlCreateActivity(getActivityCtrlCreateActivity());
-        menu.setDisplayHoraireCtrl(getDisplayHoraireCtrl());
+        menu.setMenuGestionStage(getMenuGestionStage());
         menu.setUser(getUser());
         return menu;
     }
@@ -107,14 +108,23 @@ public class Factory {
     }
 
     public DisplayHoraireCtrl getDisplayHoraireCtrl() {
-        if (this.displayHoraireCtrl==null){
+        if (this.displayHoraireCtrl == null) {
             this.displayHoraireCtrl = new DisplayHoraireCtrl();
             displayHoraireCtrl.setStageList(getStageList());
             displayHoraireCtrl.setUser(getUser());
             displayHoraireCtrl.setUtility(getUtility());
             displayHoraireCtrl.setVue(getVue());
         }
-
         return displayHoraireCtrl;
+    }
+
+    public MenuGestionStage getMenuGestionStage() {
+        if (this.menuGestionStage == null) {
+            this.menuGestionStage = new MenuGestionStage();
+            menuGestionStage.setActivityCtrlCreateActivity(getActivityCtrlCreateActivity());
+            menuGestionStage.setDisplayHoraireCtrl(getDisplayHoraireCtrl());
+            menuGestionStage.setUser(getUser());
+        }
+        return menuGestionStage;
     }
 }
