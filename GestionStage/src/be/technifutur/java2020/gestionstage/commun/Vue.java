@@ -9,12 +9,8 @@ import java.util.*;
 
 public class Vue {
 
-    public void consigneAjoutNomStage() {
-        System.out.println("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
-    }
-
-    public void consigneAjoutNomActivity() {
-        System.out.println("Veuillez choisir un nom d'activitée ou insérer \"q\" pour quitter");
+    public void consigneAjoutNomStageActivity(String message) {
+        System.out.println(message);
     }
 
     public void consigneAjoutDuree() {

@@ -31,7 +31,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b53e3f0-0cc5-4e4e-80c2-ce66b9bbc6b4" name="Default Changelist" comment="Rearrangemment">
+      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Participant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/ParticipantList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/MenuGestionStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/MenuGestionStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/ActivityCtrlCreateActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/ActivityCtrlCreateActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/DisplayHoraireCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/DisplayHoraireCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageCtrlCreateStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageCtrlCreateStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/StageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Vue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/commun/Vue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/personne/Inscrit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/personne/Organisateur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/personne/Participant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/personne/Secretariat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionstage/personne/Tresorier.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,13 +90,26 @@
       <recent name="F:\programmation\technifutur\java\cours\java2\exo\java2020Labo1\GestionStage\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Participant">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionstage.Main" />
       <module name="GestionStage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="be.technifutur.java2020.gestionstage.*" />
+          <option name="PATTERN" value="be.technifutur.java2020.gestionstage.commun.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Participant" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionstage.commun.Participant" />
+      <module name="GestionStage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.technifutur.java2020.gestionstage.commun.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,6 +119,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Participant" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -385,14 +415,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fin du repackatage" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1604906982165">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1604911536549">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604906982165" />
-    <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604653539762">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604911536549" />
+    <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604909352575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604653539762" />
+    <state x="565" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604909352575" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604486701655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -401,22 +431,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604652121537" />
-    <state width="1921" height="984" key="GridCell.Tab.0.bottom" timestamp="1604908033112">
+    <state width="1921" height="984" key="GridCell.Tab.0.bottom" timestamp="1604911420919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="984" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604908033112" />
-    <state width="1921" height="984" key="GridCell.Tab.0.center" timestamp="1604908033112">
+    <state width="1921" height="984" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604911420919" />
+    <state width="1921" height="984" key="GridCell.Tab.0.center" timestamp="1604911420919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="984" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604908033112" />
-    <state width="1921" height="984" key="GridCell.Tab.0.left" timestamp="1604908033112">
+    <state width="1921" height="984" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604911420919" />
+    <state width="1921" height="984" key="GridCell.Tab.0.left" timestamp="1604911420919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="984" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604908033112" />
-    <state width="1921" height="984" key="GridCell.Tab.0.right" timestamp="1604908033112">
+    <state width="1921" height="984" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604911420919" />
+    <state width="1921" height="984" key="GridCell.Tab.0.right" timestamp="1604911420919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="984" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604908033112" />
+    <state width="1921" height="984" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604911420919" />
     <state width="1877" height="274" key="GridCell.Tab.1.bottom" timestamp="1604647488091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -433,10 +463,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="274" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604647488091" />
-    <state x="775" y="453" key="ReplaceDuplicatesPrompt" timestamp="1604505379576">
+    <state x="775" y="453" key="ReplaceDuplicatesPrompt" timestamp="1604911362371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="775" y="453" key="ReplaceDuplicatesPrompt/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604505379576" />
+    <state x="775" y="453" key="ReplaceDuplicatesPrompt/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604911362371" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1604585452310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -453,10 +483,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604485720712" />
-    <state x="690" y="280" key="extract.method.dialog" timestamp="1604906921448">
+    <state x="690" y="280" key="extract.method.dialog" timestamp="1604911360300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="280" key="extract.method.dialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604906921448" />
+    <state x="690" y="280" key="extract.method.dialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604911360300" />
     <state x="597" y="140" key="new project wizard" timestamp="1604477893587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -19,12 +19,7 @@ public class DisplayHoraireCtrl {
     public void displayHoraireStage() {
         String nameStage;
         boolean displayHoraire = true;
-        vue.consigneAjoutNomStage();
-        nameStage = user.getInput();
-        while (!nameStage.equalsIgnoreCase("q") && nameStage.isEmpty()) {
-            vue.consigneAjoutNomStage();
-            nameStage = user.getInput();
-        }
+        nameStage = utility.saisirNameStage();
         if (nameStage.equalsIgnoreCase("q")) {
             displayHoraire = false;
         }

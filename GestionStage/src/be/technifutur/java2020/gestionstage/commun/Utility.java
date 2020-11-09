@@ -65,6 +65,17 @@ public class Utility {
         return parse;
     }
 
+    public String saisirNameStage(){
+        String nameStage;
+        vue.consigneAjoutNomStageActivity("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
+        nameStage = user.getInput();
+        while (!nameStage.equalsIgnoreCase("q") && nameStage.isEmpty()) {
+            vue.consigneAjoutNomStageActivity("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
+            nameStage = user.getInput();
+        }
+        return nameStage;
+    }
+
     /*
     GET INPUT USER
      */

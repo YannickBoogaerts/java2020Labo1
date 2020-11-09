@@ -3,16 +3,18 @@ package be.technifutur.java2020.gestionstage;
 import be.technifutur.java2020.gestionstage.commun.ActivityCtrlCreateActivity;
 import be.technifutur.java2020.gestionstage.commun.DisplayHoraireCtrl;
 import be.technifutur.java2020.gestionstage.commun.User;
+import be.technifutur.java2020.gestionstage.commun.Utility;
 
 public class MenuGestionStage {
 
     /*
     FIELD
      */
-    private String input = null;
+    private String input = null, nameStage;
     private DisplayHoraireCtrl displayHoraireCtrl;
     private ActivityCtrlCreateActivity activityCtrlCreateActivity;
     private User user;
+    private Utility utility;
 
 
     /*
@@ -30,6 +32,9 @@ public class MenuGestionStage {
                     break;
                 case 2:
                     displayHoraireCtrl.displayHoraireStage();
+                    break;
+                case 3:
+
                     break;
             }
             showMenu();
@@ -63,5 +68,9 @@ public class MenuGestionStage {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public void setUtility(Utility utility) {
+        this.utility = utility;
     }
 }

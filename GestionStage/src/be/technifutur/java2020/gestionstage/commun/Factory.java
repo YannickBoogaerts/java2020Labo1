@@ -124,6 +124,7 @@ public class Factory {
             menuGestionStage.setActivityCtrlCreateActivity(getActivityCtrlCreateActivity());
             menuGestionStage.setDisplayHoraireCtrl(getDisplayHoraireCtrl());
             menuGestionStage.setUser(getUser());
+            menuGestionStage.setUtility(getUtility());
         }
         return menuGestionStage;
     }

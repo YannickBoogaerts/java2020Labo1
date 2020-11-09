@@ -9,6 +9,7 @@ public class Menu {
     private MenuGestionStage menuGestionStage;
     private User user;
 
+
     public void displayMenu() {
         showMenu();
         input = user.getInput();

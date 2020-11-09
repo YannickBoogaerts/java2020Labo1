@@ -6,11 +6,14 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class StageList {
+    /*
+    FIELD
+     */
     private Map<String, Stage> mapStage = new HashMap<>();
 
-    public void setMapStage(Map<String, Stage> mapStage) {
-        this.mapStage = mapStage;
-    }
+    /*
+    METHOD
+     */
 
     public void addStage(LocalDateTime dateDebut, LocalDateTime dateFin, String intituleStage) throws ExceptionGestionStageDate {
         mapStage.put(intituleStage, new Stage(dateDebut, dateFin, intituleStage));
@@ -24,18 +27,25 @@ public class StageList {
 
     }
 
+    public void setMapStage(Map<String, Stage> mapStage) {
+        this.mapStage = mapStage;
+    }
+
+    /*
+    GETTER AND SETTER
+     */
+
     public Stage getStage(String name) {
         return mapStage.get(name);
     }
 
-    public Map getMap(){
+    public Map getMap() {
         return Collections.unmodifiableMap(mapStage);
     }
 
-    public Collection<String> getStringCollection(){
+    public Collection<String> getStringCollection() {
         return Collections.unmodifiableCollection(mapStage.keySet());
     }
-
 
 
 }
