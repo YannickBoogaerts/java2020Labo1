@@ -18,22 +18,20 @@ public class ParticipantCtrlGestion {
 
     public void gestionParticipant() {
         String nomParticipant, prenomParticipant, nameStage;
-        nameStage = utility.saisirName("Veuillez insérer le nom du stage auquel le participant veut s'inscrire ou est inscrit. Insérer \"q\" pour quitter");
-        if (!nameStage.isEmpty()) {
-            nomParticipant = utility.saisirName("Veuillez saisir le nom du participant. Insérer \"q\" pour quitter");
-            if (!nomParticipant.isEmpty()) {
-                prenomParticipant = utility.saisirName("Veuillez saisir le prénom du participant. Insérer \"q\" pour quitter");
-                if (!prenomParticipant.isEmpty()) {
-                    String IDParticipant = nomParticipant.concat(prenomParticipant);
-                    Stage stage = stageList.getStage(nameStage);
-                    if (stage.getMapParticipant().containsKey(nomParticipant.concat(prenomParticipant))) {
-                        modifParticipant(participantList.getParticipant(IDParticipant));
-                    } else {
-                        createParticipant(IDParticipant,nomParticipant, prenomParticipant, stage);
-                    }
+
+        nomParticipant = utility.saisirName("Veuillez saisir le nom du participant. Insérer \"q\" pour quitter");
+        if (!nomParticipant.isEmpty()) {
+            prenomParticipant = utility.saisirName("Veuillez saisir le prénom du participant. Insérer \"q\" pour quitter");
+            if (!prenomParticipant.isEmpty()) {
+                String IDParticipant = nomParticipant.concat(prenomParticipant);
+                if (participantList.getMapParticipant().containsKey(IDParticipant)) {
+                    modifParticipant(participantList.getParticipant(IDParticipant));
+                } else {
+                    createParticipant(IDParticipant, nomParticipant, prenomParticipant);
                 }
             }
         }
+
     }
 
     //Modification d'information d'un participant
@@ -43,12 +41,20 @@ public class ParticipantCtrlGestion {
     }
 
     //Creation d'un participant
-    private void createParticipant(String IDParticipant, String nomParticipant, String prenomParticipant, Stage stage) {
-        String mailParticipant, clubParticipant;
-        clubParticipant = utility.saisirName("Veuillez saisir le nom du club du participant ou insérer \"q\" pour laisser vide.");
-        mailParticipant = utility.saisirMail("Veuillez saisir l'adresse mail du participant ou insérer \"q\" pour laisser vide.");
-        Participant participant = stage.createParticipant(IDParticipant,nomParticipant,prenomParticipant,clubParticipant,mailParticipant);
-        participantList.addParticipant(IDParticipant,participant);
+    private void createParticipant(String IDParticipant, String nomParticipant, String prenomParticipant) {
+        String mailParticipant, clubParticipant, nameStage;
+        vue.afficheMessage("L'utilisateur n'existe pas.");
+        nameStage = utility.saisirName("Veuillez insérer le nom du stage auquel le participant veut s'inscrire. Insérer \"q\" pour quitter");
+        while (!stageList.getMap().containsKey(nameStage) && !nameStage.equalsIgnoreCase("q")) {
+            nameStage = utility.saisirName("Veuillez insérer le nom du stage auquel le participant veut s'inscrire. Insérer \"q\" pour quitter");
+        }
+        if (!nameStage.isEmpty()) {
+            Stage stage = stageList.getStage(nameStage);
+            clubParticipant = utility.saisirName("Veuillez saisir le nom du club du participant ou insérer \"q\" pour laisser vide.");
+            mailParticipant = utility.saisirMail("Veuillez saisir l'adresse mail du participant ou insérer \"q\" pour laisser vide.");
+            Participant participant = stage.createParticipant(IDParticipant, nomParticipant, prenomParticipant, clubParticipant, mailParticipant);
+            participantList.addParticipant(IDParticipant, participant);
+        }
     }
 
 
