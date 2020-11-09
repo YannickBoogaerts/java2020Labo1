@@ -52,8 +52,7 @@ public class Participant {
         this.prenomParticipant = prenomParticipant;
     }
 
-    public String getNomPrenomParticipant() {
-
+    public String getIDParticipant() {
         return nomParticipant.concat(prenomParticipant);
     }
 
@@ -73,6 +72,7 @@ public class Participant {
         this.adresseMail = adresseMail;
     }
 
+    //KEY nom stage
     public Map<String, Stage> getListStageParticipant() {
         return listStageParticipant;
     }

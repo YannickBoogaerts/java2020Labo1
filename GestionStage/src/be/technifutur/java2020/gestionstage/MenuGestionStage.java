@@ -1,18 +1,16 @@
 package be.technifutur.java2020.gestionstage;
 
-import be.technifutur.java2020.gestionstage.commun.ActivityCtrlCreateActivity;
-import be.technifutur.java2020.gestionstage.commun.DisplayHoraireCtrl;
-import be.technifutur.java2020.gestionstage.commun.User;
-import be.technifutur.java2020.gestionstage.commun.Utility;
+import be.technifutur.java2020.gestionstage.commun.*;
 
 public class MenuGestionStage {
 
     /*
     FIELD
      */
-    private String input = null, nameStage;
+    private String input = null;
     private DisplayHoraireCtrl displayHoraireCtrl;
     private ActivityCtrlCreateActivity activityCtrlCreateActivity;
+    private ParticipantCtrlGestion participantCtrlGestion;
     private User user;
     private Utility utility;
 
@@ -34,7 +32,7 @@ public class MenuGestionStage {
                     displayHoraireCtrl.displayHoraireStage();
                     break;
                 case 3:
-
+                    participantCtrlGestion.gestionParticipant();
                     break;
             }
             showMenu();
@@ -45,8 +43,9 @@ public class MenuGestionStage {
     private void showMenu() {
         System.out.println("" +
                 "Veuillez choisir une option.\n" +
-                "1. Ajouter une activitée à un stage.\n" + /* repack 2 et 3 et 4 dans un sous-menu */
+                "1. Ajouter une activitée à un stage.\n" +
                 "2. Afficher les activitées d'un stage\n" +
+                "3. Gérer un participant\n"+
                 "q. Quitter l'application.");
     }
 
@@ -60,6 +59,10 @@ public class MenuGestionStage {
 
     public void setActivityCtrlCreateActivity(ActivityCtrlCreateActivity activityCtrlCreateActivity) {
         this.activityCtrlCreateActivity = activityCtrlCreateActivity;
+    }
+
+    public void setParticipantCtrlGestion(ParticipantCtrlGestion participantCtrlGestion) {
+        this.participantCtrlGestion = participantCtrlGestion;
     }
 
     public void setInput(String input) {

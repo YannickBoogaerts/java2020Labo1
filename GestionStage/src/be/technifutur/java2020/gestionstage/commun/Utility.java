@@ -47,6 +47,7 @@ public class Utility {
         while (!inputDuration.equalsIgnoreCase("q") && !tryParseInt(inputDuration) && !matcher.matches()) {
             vue.consigneAjoutDuree();
             inputDuration = user.getInput();
+            matcher = pattern.matcher(inputDuration);
         }
         if (!inputDuration.equalsIgnoreCase("q")){
             optionalInt = OptionalInt.of(Integer.parseInt(inputDuration));
@@ -65,15 +66,33 @@ public class Utility {
         return parse;
     }
 
-    public String saisirNameStage(){
+    public String saisirName(String consigne){
         String nameStage;
-        vue.consigneAjoutNomStageActivity("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
+        vue.afficheMessage(consigne);
         nameStage = user.getInput();
         while (!nameStage.equalsIgnoreCase("q") && nameStage.isEmpty()) {
-            vue.consigneAjoutNomStageActivity("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
+            vue.afficheMessage(consigne);
             nameStage = user.getInput();
         }
+        if (nameStage.equalsIgnoreCase("q")){
+            nameStage = "";
+        }
         return nameStage;
+    }
+
+    public String saisirMail(String message) {
+        String input;
+        Pattern pattern = Pattern.compile(".[@].[.].|[qQ]");
+        vue.afficheMessage(message);
+        input = user.getInput();
+        Matcher matcher = pattern.matcher(input);
+        while (!input.equalsIgnoreCase("q") && !matcher.matches()){
+            vue.afficheMessage(message);
+            input = user.getInput();
+            matcher = pattern.matcher(input);
+        }
+
+        return null;
     }
 
     /*
@@ -97,5 +116,6 @@ public class Utility {
     public void setVue(Vue vue) {
         this.vue = vue;
     }
+
 
 }

@@ -15,8 +15,7 @@ public class Stage {
     private LocalDateTime dateFin;
     private String intituleStage;
     private Map<String, Activity> mapActivity;
-    /*private int nbrParticipantMax;
-    private int nbrParticipantInscrit = 0;*/
+    private Map<String, Participant> mapParticipant;
 
     public Stage(LocalDateTime dateDebut, LocalDateTime dateFin, String intituleStage) throws ExceptionGestionStageDate {
         if (dateFin.isBefore(dateDebut)) {
@@ -26,6 +25,7 @@ public class Stage {
         setDateFin(dateFin);
         setIntituleStage(intituleStage);
         mapActivity = new HashMap<>();
+        mapParticipant = new HashMap<>();
     }
 
     public void addActivity(LocalDateTime dateDebut, int duration, String nameActivity) throws ExceptionGestionStage {
@@ -48,7 +48,7 @@ public class Stage {
     }
 
     /*
-    GETTER / SETTER
+    GETTER AND SETTER
      */
 
     public LocalDateTime getDateDebut() {
@@ -76,27 +76,11 @@ public class Stage {
         this.intituleStage = intituleStage;
     }
 
-
-
-
-
-   /* public int getNbrParticipantMax() {
-        return nbrParticipantMax;
+    public Map<String, Participant> getMapParticipant() {
+        return mapParticipant;
     }
 
-    public void setNbrParticipantMax(int nbrParticipantMax) {
-        this.nbrParticipantMax = nbrParticipantMax;
+    public void setMapParticipant(Map<String, Participant> mapParticipant) {
+        this.mapParticipant = mapParticipant;
     }
-
-    public int getNbrParticipantInscrit() {
-        return nbrParticipantInscrit;
-    }
-
-    public void addNbrParticipantInscrit() {
-        if (this.nbrParticipantInscrit <= this.nbrParticipantMax){
-            this.nbrParticipantInscrit++;
-        }else {
-            // pas possible
-        }
-    }*/
 }

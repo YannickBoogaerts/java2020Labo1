@@ -41,7 +41,6 @@ public class Main {
                 "Java base 1",
                 "10.10.2020.08.00",
                 "60",
-                "3",
                 "1",
                 "Ztage",
                 "Communication",
@@ -66,6 +65,10 @@ public class Main {
                 "180",
                 "2",
                 "Ztage",
+                "3",
+                "Ctage Multisport",
+                "Jonathan",
+                "Arabia",
                 "q",
                 "q"
         };

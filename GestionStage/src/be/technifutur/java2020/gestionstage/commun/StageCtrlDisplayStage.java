@@ -18,7 +18,6 @@ public class StageCtrlDisplayStage {
             dateDebut = (value.getDateDebut());
             dateFin = (value.getDateFin());
             vue.afficheStage(name,dateDebut,dateFin);
-
         }
     }
 

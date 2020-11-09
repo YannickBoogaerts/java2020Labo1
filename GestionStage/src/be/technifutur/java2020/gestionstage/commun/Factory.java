@@ -20,15 +20,17 @@ public class Factory {
     FIELD
      */
 
-    private StageList stageList;
     private Vue vue;
+    private Utility utility;
+    private User user;
+    private MenuGestionStage menuGestionStage;
+    private StageList stageList;
+    private ParticipantList participantList;
     private StageCtrlCreateStage stageCtrlCreateStage;
     private StageCtrlDisplayStage stageCtrlDisplayStage;
     private ActivityCtrlCreateActivity activityCtrlCreateActivity;
     private DisplayHoraireCtrl displayHoraireCtrl;
-    private MenuGestionStage menuGestionStage;
-    private Utility utility;
-    private User user;
+    private ParticipantCtrlGestion participantCtrlGestion;
 
     /*
     METHOD
@@ -44,12 +46,31 @@ public class Factory {
         return menu;
     }
 
+    public MenuGestionStage getMenuGestionStage() {
+        if (this.menuGestionStage == null) {
+            this.menuGestionStage = new MenuGestionStage();
+            menuGestionStage.setActivityCtrlCreateActivity(getActivityCtrlCreateActivity());
+            menuGestionStage.setDisplayHoraireCtrl(getDisplayHoraireCtrl());
+            menuGestionStage.setUser(getUser());
+            menuGestionStage.setUtility(getUtility());
+            menuGestionStage.setParticipantCtrlGestion(getParticipantCtrlGestion());
+        }
+        return menuGestionStage;
+    }
+
 
     public StageList getStageList() {
         if (this.stageList == null) {
             this.stageList = new StageList();
         }
         return stageList;
+    }
+
+    public ParticipantList getParticipantList() {
+        if (this.participantList == null) {
+            this.participantList = new ParticipantList();
+        }
+        return participantList;
     }
 
     public Vue getVue() {
@@ -118,14 +139,16 @@ public class Factory {
         return displayHoraireCtrl;
     }
 
-    public MenuGestionStage getMenuGestionStage() {
-        if (this.menuGestionStage == null) {
-            this.menuGestionStage = new MenuGestionStage();
-            menuGestionStage.setActivityCtrlCreateActivity(getActivityCtrlCreateActivity());
-            menuGestionStage.setDisplayHoraireCtrl(getDisplayHoraireCtrl());
-            menuGestionStage.setUser(getUser());
-            menuGestionStage.setUtility(getUtility());
+    public ParticipantCtrlGestion getParticipantCtrlGestion() {
+        if (this.participantCtrlGestion == null) {
+            this.participantCtrlGestion = new ParticipantCtrlGestion();
+            participantCtrlGestion.setUser(getUser());
+            participantCtrlGestion.setUtility(getUtility());
+            participantCtrlGestion.setVue(getVue());
+            participantCtrlGestion.setParticipantList(getParticipantList());
+            participantCtrlGestion.setStageList(getStageList());
         }
-        return menuGestionStage;
+        return participantCtrlGestion;
     }
+
 }

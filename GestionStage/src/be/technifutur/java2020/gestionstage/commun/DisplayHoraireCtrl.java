@@ -1,6 +1,5 @@
 package be.technifutur.java2020.gestionstage.commun;
 
-import java.time.LocalDateTime;
 import java.util.*;
 
 public class DisplayHoraireCtrl {
@@ -19,7 +18,7 @@ public class DisplayHoraireCtrl {
     public void displayHoraireStage() {
         String nameStage;
         boolean displayHoraire = true;
-        nameStage = utility.saisirNameStage();
+        nameStage = utility.saisirName("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
         if (nameStage.equalsIgnoreCase("q")) {
             displayHoraire = false;
         }

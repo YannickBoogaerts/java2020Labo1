@@ -15,10 +15,10 @@ public class StageCtrlCreateStage {
         LocalDateTime dateDebut = null, dateFin = null;
         boolean insertStage = true;
 
-        vue.consigneAjoutNomStageActivity("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
+        vue.afficheMessage("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
         name = user.getInput();
         while (name.equals("")) {
-            vue.consigneAjoutNomStageActivity("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
+            vue.afficheMessage("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
             name = user.getInput();
         }
         if (insertStage) {

@@ -9,7 +9,7 @@ import java.util.*;
 
 public class Vue {
 
-    public void consigneAjoutNomStageActivity(String message) {
+    public void afficheMessage(String message) {
         System.out.println(message);
     }
 

@@ -19,7 +19,7 @@ public class ActivityCtrlCreateActivity {
         LocalDateTime dateDebut = null;
         boolean createStage = true;
 
-        nameStage = utility.saisirNameStage();
+        nameStage = utility.saisirName("Veuillez choisir un nom de stage ou insérer \"q\" pour quitter");
         if (nameStage.equalsIgnoreCase("q")) {
             createStage = false;
         } else {
@@ -27,10 +27,10 @@ public class ActivityCtrlCreateActivity {
         }
 
         if (createStage) {
-            vue.consigneAjoutNomStageActivity("Veuillez choisir un nom d'activitée ou insérer \"q\" pour quitter");
+            vue.afficheMessage("Veuillez choisir un nom d'activitée ou insérer \"q\" pour quitter");
             nameActivity = user.getInput();
             while (nameActivity.isEmpty()) {
-                vue.consigneAjoutNomStageActivity("Veuillez choisir un nom d'activitée ou insérer \"q\" pour quitter");
+                vue.afficheMessage("Veuillez choisir un nom d'activitée ou insérer \"q\" pour quitter");
                 nameActivity = user.getInput();
             }
         }

@@ -37,7 +37,7 @@ public class Menu {
                 "Veuillez choisir une option.\n" +
                 "1. Créer un stage.\n" +
                 "2. Afficher les stages\n" +
-                "3. Gestion des stages.\n" + /* repack 3 et 4 dans un sous-menu */
+                "3. Gestion des stages.\n" +
                 "q. Quitter l'application.");
     }
 
