@@ -27,7 +27,7 @@ public class ParticipantCtrlGestion {
                     String IDParticipant = nomParticipant.concat(prenomParticipant);
                     Stage stage = stageList.getStage(nameStage);
                     if (stage.getMapParticipant().containsKey(nomParticipant.concat(prenomParticipant))) {
-                        modifParticipant(participantList.getParticipant(IDParticipant));//envoyer un participant !!!
+                        modifParticipant(participantList.getParticipant(IDParticipant));
                     } else {
                         createParticipant(IDParticipant,nomParticipant, prenomParticipant, stage);
                     }
@@ -38,7 +38,8 @@ public class ParticipantCtrlGestion {
 
     //Modification d'information d'un participant
     private void modifParticipant(Participant participant) {
-
+        vue.afficheMessage("Données du Participant : ");
+        vue.afficheParticipant(participant);
     }
 
     //Creation d'un participant

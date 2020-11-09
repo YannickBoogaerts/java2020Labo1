@@ -75,4 +75,18 @@ public class Vue {
             );
         }
     }
+
+    public void afficheParticipant(Participant participant) {
+        System.out.println("" +
+                "Nom du participant : " + participant.getNomParticipant() + "\n" +
+                "Prénom du participant : " + participant.getPrenomParticipant()
+        );
+        if (!participant.getNomClub().isEmpty())
+            System.out.println("Nom du club du participant : " + participant.getNomClub());
+
+        if (!participant.getAdresseMail().isEmpty())
+            System.out.println("Adresse mail du participant : " + participant.getAdresseMail());
+
+
+    }
 }

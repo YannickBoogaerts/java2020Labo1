@@ -1,6 +1,7 @@
 package be.technifutur.java2020.gestionstage.commun;
 
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Participant {
@@ -24,6 +25,7 @@ public class Participant {
         setPrenomParticipant(prenomParticipant.toUpperCase());
         setNomClub(nomClub);
         setAdresseMail(adresseMail);
+        listStageParticipant = new HashMap<>();
         listStageParticipant.put(stage.getIntituleStage(),stage);
     }
 

@@ -49,7 +49,7 @@ public class Utility {
             inputDuration = user.getInput();
             matcher = pattern.matcher(inputDuration);
         }
-        if (!inputDuration.equalsIgnoreCase("q")){
+        if (!inputDuration.equalsIgnoreCase("q")) {
             optionalInt = OptionalInt.of(Integer.parseInt(inputDuration));
         }
         return optionalInt;
@@ -66,7 +66,7 @@ public class Utility {
         return parse;
     }
 
-    public String saisirName(String consigne){
+    public String saisirName(String consigne) {
         String nameStage;
         vue.afficheMessage(consigne);
         nameStage = user.getInput();
@@ -74,7 +74,7 @@ public class Utility {
             vue.afficheMessage(consigne);
             nameStage = user.getInput();
         }
-        if (nameStage.equalsIgnoreCase("q")){
+        if (nameStage.equalsIgnoreCase("q")) {
             nameStage = "";
         }
         return nameStage;
@@ -82,17 +82,17 @@ public class Utility {
 
     public String saisirMail(String message) {
         String input;
-        Pattern pattern = Pattern.compile(".[@].[.].|[qQ]");
+        Pattern pattern = Pattern.compile(".*[@].*|[qQ]");
         vue.afficheMessage(message);
         input = user.getInput();
         Matcher matcher = pattern.matcher(input);
-        while (!input.equalsIgnoreCase("q") && !matcher.matches()){
+        while (!input.equalsIgnoreCase("q") && !matcher.matches()) {
             vue.afficheMessage(message);
             input = user.getInput();
             matcher = pattern.matcher(input);
         }
-        if (input.equalsIgnoreCase("q")){
-            input="";
+        if (input.equalsIgnoreCase("q")) {
+            input = "";
         }
         return input;
     }
